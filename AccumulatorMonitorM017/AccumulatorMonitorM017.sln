@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AccumulatorMonitorM017_GUI", "AccumulatorMonitorM017\AccumulatorMonitorM017_GUI.csproj", "{6A93E017-AAC8-442B-A29C-C2691912E9AA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AccumulatorMonitorM017_Console", "AccumulatorMonitorM017_Console\AccumulatorMonitorM017_Console.csproj", "{81076F4A-CB6B-4068-AABA-6EF6B8965192}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{6A93E017-AAC8-442B-A29C-C2691912E9AA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6A93E017-AAC8-442B-A29C-C2691912E9AA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6A93E017-AAC8-442B-A29C-C2691912E9AA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6A93E017-AAC8-442B-A29C-C2691912E9AA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{81076F4A-CB6B-4068-AABA-6EF6B8965192}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{81076F4A-CB6B-4068-AABA-6EF6B8965192}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{81076F4A-CB6B-4068-AABA-6EF6B8965192}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{81076F4A-CB6B-4068-AABA-6EF6B8965192}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
