@@ -12,6 +12,8 @@ public class TrackGenerator : MonoBehaviour {
     private string RootDir = @"C:\Users\luke_\Desktop\FSAE Apps\DriverTrainingSim\DriverTrainingSimulator\Assets\Resources\";
     private float trackwidth = 2.5f;
 
+    private GameObject[] TrackNodes;
+    
     private void OnGUI()
     {
         Filename = GUI.TextArea(new Rect(10, 10, 100, 20), Filename);
@@ -26,7 +28,11 @@ public class TrackGenerator : MonoBehaviour {
         }
     }
     
-
+    /// <summary>
+    /// Read coordinates from a specified text-based file
+    /// </summary>
+    /// <param name="fileName">Path of the file in the resources folder to read</param>
+    /// <returns>Success</returns>
     private bool ReadFile(string fileName)
     {
         // Handle any problems that might arise when reading the text
@@ -72,44 +78,54 @@ public class TrackGenerator : MonoBehaviour {
         }
     }
 
+    /// <summary>
+    /// Lays a track from a specified array of coordinates for the central path through that track
+    /// </summary>
+    /// <param name="coordinates"> Array of coordinates to use</param>
     private void LayTrack(string[] coordinates)
     {
-        // create the track
+        // initialise storage array
+        TrackNodes = new GameObject[coordinates.Length];
+
+        // clear the previous track
         for(int i = 0; i < GeneratedTrack.transform.childCount; i++)
         {
             Destroy(GeneratedTrack.transform.GetChild(0).gameObject);
         }
 
-        GameObject LastNode = new GameObject();
-
-        for (int i = 0; i < coordinates.GetLength(0); i++)
+        // add objects
+        for (int i = 0; i < coordinates.Length; i++)
         {
             // place the plane
             string[] node = coordinates[i].Split(',');
-            GameObject Node = GameObject.CreatePrimitive(PrimitiveType.Plane);
-            Node.transform.parent = GeneratedTrack.transform;
-            Node.name = "Node";
-            Node.transform.position = new Vector3(float.Parse(node[0]), 0, float.Parse(node[1])); ;
-            Node.transform.localScale = new Vector3(0.1f *(Node.transform.position - LastNode.transform.position).magnitude, 1f, 0.1f * trackwidth);
-
-            // if is the first, do nothing
+            TrackNodes[i] = GameObject.CreatePrimitive(PrimitiveType.Quad);
+            TrackNodes[i].transform.parent = GeneratedTrack.transform;
+            TrackNodes[i].name = "Node";
+            TrackNodes[i].transform.position = new Vector3(float.Parse(node[0]), 0, float.Parse(node[1]));
+            
+           
+            // if is the first, 
             if (i == 0)
             {
-                LastNode = Node;
+                TrackNodes[i].transform.localScale = new Vector3(0.1f * trackwidth, 1f, 0.1f);
                 continue;
             }
 
             // orient away from previous           
-            Node.transform.rotation = Quaternion.LookRotation(Node.transform.position - LastNode.transform.position);
+            TrackNodes[i].transform.rotation = Quaternion.LookRotation(TrackNodes[i].transform.position - TrackNodes[i-1].transform.position);
 
-            // if not last, slerp previous towards current
+            // if not last, slerp previous node towards current node
             if (i != coordinates.GetLength(0) - 1)
             {
-                LastNode.transform.rotation = Quaternion.Slerp(Node.transform.rotation, LastNode.transform.rotation, 0.5f);
+                TrackNodes[i-1].transform.rotation = Quaternion.Slerp(TrackNodes[i].transform.rotation, TrackNodes[i-1].transform.rotation, 0.5f);
             }
+        }
 
-            // store the last node
-            LastNode = Node;
+        // configure quads
+        foreach(GameObject o in TrackNodes)
+        {
+            Mesh m = new Mesh();
+
         }
     }
 }
