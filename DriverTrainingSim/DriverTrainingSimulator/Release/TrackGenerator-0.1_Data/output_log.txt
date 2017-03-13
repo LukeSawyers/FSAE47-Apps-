@@ -16,7 +16,7 @@ Platform assembly: C:\Users\luke_\Desktop\FSAE Apps\DriverTrainingSim\DriverTrai
 Loading C:\Users\luke_\Desktop\FSAE Apps\DriverTrainingSim\DriverTrainingSimulator\Release\TrackGenerator-0.1_Data\Managed\UnityEngine.UI.dll into Unity Child Domain
 Platform assembly: C:\Users\luke_\Desktop\FSAE Apps\DriverTrainingSim\DriverTrainingSimulator\Release\TrackGenerator-0.1_Data\Managed\UnityEngine.Networking.dll (this message is harmless)
 Loading C:\Users\luke_\Desktop\FSAE Apps\DriverTrainingSim\DriverTrainingSimulator\Release\TrackGenerator-0.1_Data\Managed\UnityEngine.Networking.dll into Unity Child Domain
-- Completed reload, in  0.092 seconds
+- Completed reload, in  0.322 seconds
 Platform assembly: C:\Users\luke_\Desktop\FSAE Apps\DriverTrainingSim\DriverTrainingSimulator\Release\TrackGenerator-0.1_Data\Managed\System.Core.dll (this message is harmless)
 Platform assembly: C:\Users\luke_\Desktop\FSAE Apps\DriverTrainingSim\DriverTrainingSimulator\Release\TrackGenerator-0.1_Data\Managed\System.dll (this message is harmless)
 OnLevelWasLoaded was found on ReturnToMainMenu
@@ -29,25 +29,9 @@ desktop: 2736x1824 60Hz; virtual: 2736x1824 at 0,0
 <RI> Initializing input.
 <RI> Input initialized.
 <RI> Initialized touch support.
-UnloadTime: 1.164717 ms
+UnloadTime: 1.141333 ms
 Setting up 1 worker threads for Enlighten.
-  Thread -> id: 1240 -> priority: 1 
-Could not find file "C:\Users\luke_\Desktop\FSAE Apps\DriverTrainingSim\DriverTrainingSimulator\Assets\Resources\mokeCoordinates.txt".
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 42)
-
-Could not find file "C:\Users\luke_\Desktop\FSAE Apps\DriverTrainingSim\DriverTrainingSimulator\Assets\Resources\mokeCoordinates.txt".
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 42)
-
-Could not find file "C:\Users\luke_\Desktop\FSAE Apps\DriverTrainingSim\DriverTrainingSimulator\Assets\Resources\moke.txt".
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 42)
-
-Could not find file "C:\Users\luke_\Desktop\FSAE Apps\DriverTrainingSim\DriverTrainingSimulator\Assets\Resources\moke.txt".
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 42)
-
+  Thread -> id: 1ea4 -> priority: 1 
 Could not find file "C:\Users\luke_\Desktop\FSAE Apps\DriverTrainingSim\DriverTrainingSimulator\Assets\Resources\moke.txt".
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 42)
