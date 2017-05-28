@@ -4,6 +4,9 @@ using System;
 
 namespace DTS.Controller
 {
+    /// <summary>
+    /// Controller for the main menu
+    /// </summary>
     public class MainMenuController : MenuController
     {
 
