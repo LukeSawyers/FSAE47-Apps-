@@ -6,10 +6,8 @@ using System.Threading.Tasks;
 
 namespace AccumulatorMonitorM017
 {
-    class Program
+    public class Class1
     {
-        static void Main(string[] args)
-        {
-        }
+
     }
 }
