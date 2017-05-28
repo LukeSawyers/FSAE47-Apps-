@@ -75,6 +75,16 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\DTS\Scripts\Controller\CameraController.cs" />
+    <Compile Include="Assets\DTS\Scripts\Controller\CarProviderSingleton.cs" />
+    <Compile Include="Assets\DTS\Scripts\Controller\GameConrollerSingleton.cs" />
+    <Compile Include="Assets\DTS\Scripts\Controller\MainMenuController.cs" />
+    <Compile Include="Assets\DTS\Scripts\Controller\MenuController.cs" />
+    <Compile Include="Assets\DTS\Scripts\Controller\TrackProvider.cs" />
+    <Compile Include="Assets\DTS\Scripts\Legacy\GPXFileParser.cs" />
+    <Compile Include="Assets\DTS\Scripts\Legacy\TrackGenerator.cs" />
+    <Compile Include="Assets\DTS\Scripts\Track\TrackUtility.cs" />
+    <Compile Include="Assets\DTS\Scripts\Utils.cs" />
     <Compile Include="Assets\SampleScenes\Menu\Scripts\MenuSceneLoader.cs" />
     <Compile Include="Assets\SampleScenes\Menu\Scripts\PauseMenu.cs" />
     <Compile Include="Assets\SampleScenes\Menu\Scripts\ReturnToMainMenu.cs" />
@@ -84,10 +94,12 @@
     <Compile Include="Assets\SampleScenes\Scripts\ParticleSceneControls.cs" />
     <Compile Include="Assets\SampleScenes\Scripts\PlaceTargetWithMouse.cs" />
     <Compile Include="Assets\SampleScenes\Scripts\SlowMoButton.cs" />
-    <Compile Include="Assets\Script\TrackGeneration\TrackGenerator.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Assets\Resources\test.txt" />
+    <None Include="Assets\DTS\Resources\moke.txt" />
+    <None Include="Assets\DTS\Resources\test.txt" />
+    <None Include="Assets\Editor\Doxygen\ReadMe.txt" />
+    <None Include="Assets\Editor\Doxygen\Resources\BaseDoxyfile.txt" />
     <None Include="Assets\SampleScenes\Shaders\Skybox-Procedural.shader" />
     <None Include="Assets\Standard Assets\Cameras\CameraGuidelines.txt" />
     <None Include="Assets\Standard Assets\Characters\FirstPersonCharacter\FirstPersonCharacterGuidelines.txt" />
@@ -187,6 +199,7 @@
     <None Include="Assets\Standard Assets\Vehicles\Car\Shaders\DiffuseReflectiveShader.shader" />
     <None Include="Assets\Standard Assets\Vehicles\Car\Shaders\ReflectiveDiffuseSpec.shader" />
     <None Include="Assets\Standard Assets\Vehicles\Car\Shaders\ReflectiveDiffuseSpecTransp.shader" />
+    <None Include="Assets\Wispy Sky\ReadMe.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\SyntaxTree\UnityVS\2015\UnityVS.CSharp.targets" />
 </Project>

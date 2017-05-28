@@ -1,4 +1,4 @@
 sceneSetups:
-- path: Assets/Scenes/TrackGenerator.unity
+- path: Assets/DTS/Scenes/DTS.unity
   isLoaded: 1
   isActive: 1
