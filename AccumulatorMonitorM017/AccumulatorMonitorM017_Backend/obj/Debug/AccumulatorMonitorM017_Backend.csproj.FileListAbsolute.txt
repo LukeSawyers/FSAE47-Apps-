@@ -1,0 +1,5 @@
+C:\Users\luke_\Desktop\FSAE Apps\AccumulatorMonitorM017\AccumulatorMonitorM017_Backend\bin\Debug\AccumulatorMonitorM017_Backend.dll
+C:\Users\luke_\Desktop\FSAE Apps\AccumulatorMonitorM017\AccumulatorMonitorM017_Backend\bin\Debug\AccumulatorMonitorM017_Backend.pdb
+C:\Users\luke_\Desktop\FSAE Apps\AccumulatorMonitorM017\AccumulatorMonitorM017_Backend\obj\Debug\AccumulatorMonitorM017_Backend.csprojResolveAssemblyReference.cache
+C:\Users\luke_\Desktop\FSAE Apps\AccumulatorMonitorM017\AccumulatorMonitorM017_Backend\obj\Debug\AccumulatorMonitorM017_Backend.dll
+C:\Users\luke_\Desktop\FSAE Apps\AccumulatorMonitorM017\AccumulatorMonitorM017_Backend\obj\Debug\AccumulatorMonitorM017_Backend.pdb

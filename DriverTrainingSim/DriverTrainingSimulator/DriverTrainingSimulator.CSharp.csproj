@@ -69,15 +69,18 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\DTS\Scripts\Controller\CameraController.cs" />
-    <Compile Include="Assets\DTS\Scripts\Controller\CarProviderSingleton.cs" />
-    <Compile Include="Assets\DTS\Scripts\Controller\GameConrollerSingleton.cs" />
-    <Compile Include="Assets\DTS\Scripts\Controller\MainMenuController.cs" />
-    <Compile Include="Assets\DTS\Scripts\Controller\MenuController.cs" />
-    <Compile Include="Assets\DTS\Scripts\Controller\TrackProvider.cs" />
+    <Compile Include="Assets\DTS\Scripts\Controllers\CameraController.cs" />
+    <Compile Include="Assets\DTS\Scripts\Controllers\MainMenuController.cs" />
+    <Compile Include="Assets\DTS\Scripts\Controllers\MenuController.cs" />
+    <Compile Include="Assets\DTS\Scripts\Controllers\TrackMenuController.cs" />
+    <Compile Include="Assets\DTS\Scripts\Items\CarProviderSingleton.cs" />
+    <Compile Include="Assets\DTS\Scripts\Items\ObjectProvider.cs" />
+    <Compile Include="Assets\DTS\Scripts\Items\SelectableItems.cs" />
+    <Compile Include="Assets\DTS\Scripts\Items\TrackProvider.cs" />
+    <Compile Include="Assets\DTS\Scripts\Items\Tracks\TrackUtility.cs" />
     <Compile Include="Assets\DTS\Scripts\Legacy\GPXFileParser.cs" />
+    <Compile Include="Assets\DTS\Scripts\Legacy\GameConrollerSingleton.cs" />
     <Compile Include="Assets\DTS\Scripts\Legacy\TrackGenerator.cs" />
-    <Compile Include="Assets\DTS\Scripts\Track\TrackUtility.cs" />
     <Compile Include="Assets\DTS\Scripts\Utils.cs" />
   </ItemGroup>
   <ItemGroup>

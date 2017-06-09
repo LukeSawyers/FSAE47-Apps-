@@ -17,7 +17,7 @@ uint8_t sendArr[arrLen];
 
 void setup() {
   // put your setup code here, to run once:
-  Serial.begin(1000000);
+  Serial.begin(250000);
   InitArr();
 }
 
@@ -61,7 +61,7 @@ void InitArr() {
 void SetArr() {
   
   // segment ID
-  sendArr[0] = sendArr == 5 ? 0 : sendArr + 1;
+  sendArr[0] = sendArr[0] > 5 ? 0 : sendArr[0] + 1;
 
   uint16_t chksm = 0;
   

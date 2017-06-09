@@ -3,9 +3,13 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
 VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AccumulatorMonitorM017_GUI", "AccumulatorMonitorM017\AccumulatorMonitorM017_GUI.csproj", "{6A93E017-AAC8-442B-A29C-C2691912E9AA}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AccumulatorMonitorM017.GUI", "AccumulatorMonitorM017\AccumulatorMonitorM017.GUI.csproj", "{6A93E017-AAC8-442B-A29C-C2691912E9AA}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AccumulatorMonitorM017_Console", "AccumulatorMonitorM017_Console\AccumulatorMonitorM017_Console.csproj", "{81076F4A-CB6B-4068-AABA-6EF6B8965192}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AccumulatorMonitorM017.CLI", "AccumulatorMonitorM017_Console\AccumulatorMonitorM017.CLI.csproj", "{81076F4A-CB6B-4068-AABA-6EF6B8965192}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AccumulatorMonitorM017.Backend", "AccumulatorMonitorM017_Backend\AccumulatorMonitorM017.Backend.csproj", "{B2852A29-C790-488C-A29E-42D9ED07D67A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AccumulatorMonitor2017.Tests", "AccumulatorMonitor2017_Tests\AccumulatorMonitor2017.Tests.csproj", "{B83985F2-1DB5-4866-A7AA-090E7EEBD347}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +25,14 @@ Global
 		{81076F4A-CB6B-4068-AABA-6EF6B8965192}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{81076F4A-CB6B-4068-AABA-6EF6B8965192}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{81076F4A-CB6B-4068-AABA-6EF6B8965192}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B2852A29-C790-488C-A29E-42D9ED07D67A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B2852A29-C790-488C-A29E-42D9ED07D67A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B2852A29-C790-488C-A29E-42D9ED07D67A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B2852A29-C790-488C-A29E-42D9ED07D67A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B83985F2-1DB5-4866-A7AA-090E7EEBD347}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B83985F2-1DB5-4866-A7AA-090E7EEBD347}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B83985F2-1DB5-4866-A7AA-090E7EEBD347}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B83985F2-1DB5-4866-A7AA-090E7EEBD347}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -1,0 +1,16 @@
+C:\Users\luke_\Desktop\FSAE Apps\AccumulatorMonitorM017\AccumulatorMonitorM017\bin\Debug\AccumulatorMonitorM017.exe.config
+C:\Users\luke_\Desktop\FSAE Apps\AccumulatorMonitorM017\AccumulatorMonitorM017\bin\Debug\AccumulatorMonitorM017.exe
+C:\Users\luke_\Desktop\FSAE Apps\AccumulatorMonitorM017\AccumulatorMonitorM017\bin\Debug\AccumulatorMonitorM017.pdb
+C:\Users\luke_\Desktop\FSAE Apps\AccumulatorMonitorM017\AccumulatorMonitorM017\bin\Debug\AccumulatorMonitorM017_Backend.dll
+C:\Users\luke_\Desktop\FSAE Apps\AccumulatorMonitorM017\AccumulatorMonitorM017\bin\Debug\AccumulatorMonitorM017_Backend.pdb
+C:\Users\luke_\Desktop\FSAE Apps\AccumulatorMonitorM017\AccumulatorMonitorM017\obj\Debug\AccumulatorMonitorM017.GUI.csprojResolveAssemblyReference.cache
+C:\Users\luke_\Desktop\FSAE Apps\AccumulatorMonitorM017\AccumulatorMonitorM017\obj\Debug\MainWindow.g.cs
+C:\Users\luke_\Desktop\FSAE Apps\AccumulatorMonitorM017\AccumulatorMonitorM017\obj\Debug\App.g.cs
+C:\Users\luke_\Desktop\FSAE Apps\AccumulatorMonitorM017\AccumulatorMonitorM017\obj\Debug\AccumulatorMonitorM017_MarkupCompile.cache
+C:\Users\luke_\Desktop\FSAE Apps\AccumulatorMonitorM017\AccumulatorMonitorM017\obj\Debug\AccumulatorMonitorM017_MarkupCompile.lref
+C:\Users\luke_\Desktop\FSAE Apps\AccumulatorMonitorM017\AccumulatorMonitorM017\obj\Debug\MainWindow.baml
+C:\Users\luke_\Desktop\FSAE Apps\AccumulatorMonitorM017\AccumulatorMonitorM017\obj\Debug\AccumulatorMonitorM017.g.resources
+C:\Users\luke_\Desktop\FSAE Apps\AccumulatorMonitorM017\AccumulatorMonitorM017\obj\Debug\AccumulatorMonitorM017.Properties.Resources.resources
+C:\Users\luke_\Desktop\FSAE Apps\AccumulatorMonitorM017\AccumulatorMonitorM017\obj\Debug\AccumulatorMonitorM017.GUI.csproj.GenerateResource.Cache
+C:\Users\luke_\Desktop\FSAE Apps\AccumulatorMonitorM017\AccumulatorMonitorM017\obj\Debug\AccumulatorMonitorM017.exe
+C:\Users\luke_\Desktop\FSAE Apps\AccumulatorMonitorM017\AccumulatorMonitorM017\obj\Debug\AccumulatorMonitorM017.pdb

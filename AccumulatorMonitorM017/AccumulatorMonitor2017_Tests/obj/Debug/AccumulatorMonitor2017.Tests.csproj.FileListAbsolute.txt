@@ -1,0 +1,12 @@
+C:\Users\luke_\Desktop\FSAE Apps\AccumulatorMonitorM017\AccumulatorMonitor2017_Tests\obj\Debug\AccumulatorMonitor2017.Tests.csprojResolveAssemblyReference.cache
+C:\Users\luke_\Desktop\FSAE Apps\AccumulatorMonitorM017\AccumulatorMonitor2017_Tests\bin\Debug\AccumulatorMonitor2017_Tests.dll
+C:\Users\luke_\Desktop\FSAE Apps\AccumulatorMonitorM017\AccumulatorMonitor2017_Tests\bin\Debug\AccumulatorMonitor2017_Tests.pdb
+C:\Users\luke_\Desktop\FSAE Apps\AccumulatorMonitorM017\AccumulatorMonitor2017_Tests\bin\Debug\AccumulatorMonitorM017.exe
+C:\Users\luke_\Desktop\FSAE Apps\AccumulatorMonitorM017\AccumulatorMonitor2017_Tests\bin\Debug\AccumulatorMonitorM017_Backend.dll
+C:\Users\luke_\Desktop\FSAE Apps\AccumulatorMonitorM017\AccumulatorMonitor2017_Tests\bin\Debug\AccumulatorMonitorM017_Console.exe
+C:\Users\luke_\Desktop\FSAE Apps\AccumulatorMonitorM017\AccumulatorMonitor2017_Tests\bin\Debug\Microsoft.VisualStudio.QualityTools.UnitTestFramework.dll
+C:\Users\luke_\Desktop\FSAE Apps\AccumulatorMonitorM017\AccumulatorMonitor2017_Tests\bin\Debug\AccumulatorMonitorM017.pdb
+C:\Users\luke_\Desktop\FSAE Apps\AccumulatorMonitorM017\AccumulatorMonitor2017_Tests\bin\Debug\AccumulatorMonitorM017_Backend.pdb
+C:\Users\luke_\Desktop\FSAE Apps\AccumulatorMonitorM017\AccumulatorMonitor2017_Tests\bin\Debug\AccumulatorMonitorM017_Console.pdb
+C:\Users\luke_\Desktop\FSAE Apps\AccumulatorMonitorM017\AccumulatorMonitor2017_Tests\obj\Debug\AccumulatorMonitor2017_Tests.dll
+C:\Users\luke_\Desktop\FSAE Apps\AccumulatorMonitorM017\AccumulatorMonitor2017_Tests\obj\Debug\AccumulatorMonitor2017_Tests.pdb

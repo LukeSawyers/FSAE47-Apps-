@@ -1,0 +1,1 @@
+C:\Users\luke_\Desktop\FSAE Apps\AccumulatorMonitorM017\AccumulatorMonitor2017_Tests\obj\Release\AccumulatorMonitor2017.Tests.csprojResolveAssemblyReference.cache

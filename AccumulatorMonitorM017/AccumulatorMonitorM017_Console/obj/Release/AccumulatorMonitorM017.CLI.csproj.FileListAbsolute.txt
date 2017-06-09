@@ -1,0 +1,2 @@
+C:\Users\luke_\Desktop\FSAE Apps\AccumulatorMonitorM017\AccumulatorMonitorM017_Console\bin\Release\AccumulatorMonitorM017_Console.exe.config
+C:\Users\luke_\Desktop\FSAE Apps\AccumulatorMonitorM017\AccumulatorMonitorM017_Console\obj\Release\AccumulatorMonitorM017.CLI.csprojResolveAssemblyReference.cache
