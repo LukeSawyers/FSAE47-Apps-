@@ -220,11 +220,12 @@ namespace AccumulatorMonitorM017.Backend
         }
 
         /// <summary>
-        /// Closes the serial port
+        /// Closes the serial port and disposes the SerialPort object
         /// </summary>
         public void Close()
         {
             serial.Close();
+            serial.Dispose();
         }
 
         /// <summary>
