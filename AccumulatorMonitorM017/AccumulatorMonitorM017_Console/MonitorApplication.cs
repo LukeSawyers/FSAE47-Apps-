@@ -14,23 +14,61 @@ namespace AccumulatorMonitorM017.console
 
         private string Cmd = "";
 
+        
+
         /// <summary>
         /// Accumulator interface
         /// </summary>
         AccumulatorInterface acc = new AccumulatorInterface();
 
+        bool _allstreams = false;
+        bool allstreams
+        {
+            get
+            {
+                return _allstreams;
+            }
+            set
+            {
+                _allstreams = value;
+                for (int i = 0; i < 6; i++) { streambools[i] = _allstreams; }
+            }
+        }
+        bool[] streambools = new bool[] { false, false, false, false, false, false };
 
         public void Start()
         {
-            
+            acc.OnAutoConnectSuccessful += Acc_OnAutoConnectSuccessful;
+            Console.WriteLine("Accumulator Monitor Application CLI");
+            Console.WriteLine("Written for the University of Auckland Formula-SAE Team (FSAE:47) By Luke Sawyers - 2017");
+            Console.WriteLine("Please do report issues to https://github.com/likeasomeboody/FSAE47-Apps- and/or contribute");
+            Console.WriteLine("\nType 'Help' To get Started");
         }
-
+        
         public void Update()
         {
             // Process Commands
             Cmd = Console.ReadLine();
             ParseCommand(Cmd);
         }
+
+        private string[] HelpText =
+        {
+            "\nhelp - How did you get here?\n",
+            "echo [text] - Prints your own gibberish for you to read\n",
+            "quit - Starts the application (no the opposite)\n",
+
+            "connect \t\t\t - attempt to autoconnect to a plugged in accumulator using the default baudrate of 250000",
+            "connect [port] \t\t\t - attempt to the selected port using the default baudrate of 250000",
+            "connect [port] [baudrate] \t - attempt to the selected port using the selected baudrate\n",
+
+            "get ports \t\t\t - get the available serial ports",
+            "get connected \t\t\t - get the connected serial ports",
+            "get voltages [segment] \t - get the last reported voltages for the specified segment (1-6)",
+            
+            "stream [segment] \t\t - starts/stops streaming the specified segment (1-6)",
+            "stream all \t\t - starts/stops streaming all segments",
+        };
 
         /// <summary>
         /// Translates commands into actions
@@ -141,11 +179,43 @@ namespace AccumulatorMonitorM017.console
                     break;
                 #endregion
 
-                #region Connect
-                case "connect":
-                    if (args.Length < 2)
+                #region Stream
+
+                case "stream":
+                    if(args.Length < 2)
                     {
                         Console.WriteLine("Not Enough Args");
+                    }
+
+                    // parse segment number
+                    int segment;
+                    if(Int32.TryParse(args[1], out segment))
+                    {
+                        if(segment < 7 && segment > 0)
+                        {
+                            streambools[segment-1] = !streambools[segment-1];
+                        }
+                    }
+                    else
+                    {
+                        if(lowers[1] == "all")
+                        {
+                            allstreams = !allstreams;
+                        }
+                    }
+
+                    // if parse failed, try all keyword
+                    
+                    break;
+
+                #endregion
+
+                #region Connect
+                case "connect":
+
+                    if (args.Length < 2)
+                    {
+                        acc.StartSerialAutoConnect();
                         return;
                     }
 
@@ -162,7 +232,18 @@ namespace AccumulatorMonitorM017.console
                         }
                     }
                     break;
-                    #endregion
+                #endregion
+
+                #region Help
+
+                case "help":
+                    foreach(string s in HelpText)
+                    {
+                        Console.WriteLine(s);
+                    }
+                    break;
+
+                #endregion
             }
         }
 
@@ -173,7 +254,6 @@ namespace AccumulatorMonitorM017.console
         /// <param name="baud"></param>
         private void InitialiseSerial(string name, int baud)
         {
-            
             try
             {
                 SerialInterface serial = new SerialInterface(name, baud);
@@ -198,7 +278,36 @@ namespace AccumulatorMonitorM017.console
         /// <param name="f"></param>
         private void Serial_OnFrameUpdated(DataFrame f, SerialInterface sender)
         {
+            PrintStream();
+        }
+
+        /// <summary>
+        /// Prints according to the stream
+        /// </summary>
+        private void PrintStream()
+        {
+            Console.WriteLine("Voltages:");
             
+            // foreach cell
+            for(int i = 0; i < 24; i++)
+            {
+                string s = "";
+
+                // foreach segment
+                for (int j = 0; j < 6; j++)
+                {
+                    s += acc.LastFrames[j].Voltages[i].ToString("0.00") + "V\t";
+                }
+
+                Console.WriteLine(s);
+            }
+        }
+
+        // When autoconnect is successful
+        private void Acc_OnAutoConnectSuccessful()
+        {
+            Console.WriteLine("Connected!");
+            acc.OnFrameRecived += Serial_OnFrameUpdated;
         }
     }
 }

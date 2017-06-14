@@ -6,3 +6,11 @@ C:\Users\luke_\Desktop\FSAE Apps\AccumulatorMonitorM017\AccumulatorMonitorM017_C
 C:\Users\luke_\Desktop\FSAE Apps\AccumulatorMonitorM017\AccumulatorMonitorM017_Console\bin\Debug\AccumulatorMonitorM017_Backend.pdb
 C:\Users\luke_\Desktop\FSAE Apps\AccumulatorMonitorM017\AccumulatorMonitorM017_Console\obj\Debug\AccumulatorMonitorM017_Console.exe
 C:\Users\luke_\Desktop\FSAE Apps\AccumulatorMonitorM017\AccumulatorMonitorM017_Console\obj\Debug\AccumulatorMonitorM017_Console.pdb
+E:\Repos\FSAE47-Apps-\AccumulatorMonitorM017\AccumulatorMonitorM017_Console\bin\Debug\AccumulatorMonitorM017_Console.exe.config
+E:\Repos\FSAE47-Apps-\AccumulatorMonitorM017\AccumulatorMonitorM017_Console\bin\Debug\AccumulatorMonitorM017_Console.exe
+E:\Repos\FSAE47-Apps-\AccumulatorMonitorM017\AccumulatorMonitorM017_Console\bin\Debug\AccumulatorMonitorM017_Console.pdb
+E:\Repos\FSAE47-Apps-\AccumulatorMonitorM017\AccumulatorMonitorM017_Console\bin\Debug\AccumulatorMonitorM017_Backend.dll
+E:\Repos\FSAE47-Apps-\AccumulatorMonitorM017\AccumulatorMonitorM017_Console\bin\Debug\AccumulatorMonitorM017_Backend.pdb
+E:\Repos\FSAE47-Apps-\AccumulatorMonitorM017\AccumulatorMonitorM017_Console\obj\Debug\AccumulatorMonitorM017.CLI.csprojResolveAssemblyReference.cache
+E:\Repos\FSAE47-Apps-\AccumulatorMonitorM017\AccumulatorMonitorM017_Console\obj\Debug\AccumulatorMonitorM017_Console.exe
+E:\Repos\FSAE47-Apps-\AccumulatorMonitorM017\AccumulatorMonitorM017_Console\obj\Debug\AccumulatorMonitorM017_Console.pdb

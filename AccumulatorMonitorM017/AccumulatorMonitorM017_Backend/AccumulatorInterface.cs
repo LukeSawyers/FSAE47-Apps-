@@ -19,7 +19,7 @@ namespace AccumulatorMonitorM017.Backend
         /// <summary>
         /// The last frames for each segment, keyed by segment number
         /// </summary>
-        private Dictionary<int, DataFrame> LastFrames = new Dictionary<int, DataFrame>();
+        public Dictionary<int, DataFrame> LastFrames = new Dictionary<int, DataFrame>();
 
         /// <summary>
         /// Timer used to attempt autoconnects when we are connecting
@@ -30,6 +30,8 @@ namespace AccumulatorMonitorM017.Backend
         /// Indicator of whether the program is connected to an accumulator
         /// </summary>
         public bool connected = false;
+
+        public event SerialInterface.frameRecieved OnFrameRecived;
 
         #endregion
 
@@ -106,9 +108,9 @@ namespace AccumulatorMonitorM017.Backend
             {
                 LastFrames.Add(f.segmentID, f);
             }
+
+            this.OnFrameRecived?.Invoke(f,sender);
         }
-
-
 
         #endregion
 
@@ -116,6 +118,9 @@ namespace AccumulatorMonitorM017.Backend
 
         private string[] ports;
         private int index = 0;
+
+        public delegate void AutoConnectSuccessful();
+        public event AutoConnectSuccessful OnAutoConnectSuccessful;
 
         private Timer WaitForFrameTimer;
 
@@ -173,7 +178,7 @@ namespace AccumulatorMonitorM017.Backend
             serial.OnFrameUpdated += WaitForFrameRecieved;
 
             // set up timeout timer
-            WaitForFrameTimer = new Timer(500);
+            WaitForFrameTimer = new Timer(3000);
             WaitForFrameTimer.Start();
             WaitForFrameTimer.Elapsed += WaitForFrameTimeout;
         }
@@ -209,6 +214,9 @@ namespace AccumulatorMonitorM017.Backend
 
             // stop trying to connect
             StopSerialAutoConnect();
+
+            // raise event
+            OnAutoConnectSuccessful?.Invoke();
 
         }
 
