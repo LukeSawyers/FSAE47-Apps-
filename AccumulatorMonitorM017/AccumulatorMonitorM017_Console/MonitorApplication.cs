@@ -64,10 +64,10 @@ namespace AccumulatorMonitorM017.console
 
             "get ports \t\t\t - get the available serial ports",
             "get connected \t\t\t - get the connected serial ports",
-            "get voltages [segment] \t - get the last reported voltages for the specified segment (1-6)",
+            "get voltages [segment] \t\t - get the last reported voltages for the specified segment (1-6)\n",
             
             "stream [segment] \t\t - starts/stops streaming the specified segment (1-6)",
-            "stream all \t\t - starts/stops streaming all segments",
+            "stream all \t\t\t - starts/stops streaming all segments",
         };
 
         /// <summary>
@@ -296,9 +296,11 @@ namespace AccumulatorMonitorM017.console
                 // foreach segment
                 for (int j = 0; j < 6; j++)
                 {
-                    s += acc.LastFrames[j].Voltages[i].ToString("0.00") + "V\t";
+                    if(acc.LastFrames.ContainsKey(j))
+                    {
+                        s += "S" + j.ToString() + "C" + i.ToString() + ": " + acc.LastFrames[j].Voltages[i].ToString("0.00") + "V\t";
+                    }
                 }
-
                 Console.WriteLine(s);
             }
         }

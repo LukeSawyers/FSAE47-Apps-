@@ -7,7 +7,7 @@ Byte 99-100 is a two byte checksum calculated using this function.
 Byte 101-102 is the frame end 0xFFFE
 */
 
-#define arrLen 102
+#define arrLen 104
 #define randVolMin 300
 #define randVolMax 420
 #define randTempMin 500
@@ -25,7 +25,7 @@ void loop() {
   // put your main code here, to run repeatedly:
   delay(2000);
   SetArr();
-  Serial.write(sendArr, 102);
+  Serial.write(sendArr, arrLen);
   
 }
 
@@ -61,7 +61,7 @@ void InitArr() {
 void SetArr() {
   
   // segment ID
-  sendArr[0] = sendArr[0] > 5 ? 0 : sendArr[0] + 1;
+  sendArr[0] = sendArr[0] > 4 ? 0 : sendArr[0] + 1;
 
   uint16_t chksm = 0;
   
@@ -91,8 +91,6 @@ void SetArr() {
   // add the checksum
   sendArr[98] = lowByte(chksm);
   sendArr[99] = highByte(chksm);
-  
 
-  
 }
 

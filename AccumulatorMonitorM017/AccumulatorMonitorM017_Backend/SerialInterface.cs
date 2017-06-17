@@ -5,6 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.IO.Ports;
+using System.Timers;
 
 namespace AccumulatorMonitorM017.Backend
 {
@@ -13,6 +14,8 @@ namespace AccumulatorMonitorM017.Backend
     /// </summary>
     public class SerialInterface
     {
+        const int BufferSize = 104;
+
         #region Static Members
 
         /// <summary>
@@ -53,7 +56,7 @@ namespace AccumulatorMonitorM017.Backend
 
             if (readArr[100] != 0xFF    ||
                 readArr[101] != 0xFE    ||     // end characters in the correct place
-                readArr.Length != 102   ||     // length is correct
+                readArr.Length != BufferSize ||     // length is correct
                 readArr[0] > 5    ||           // segment indicator is reporting reasonable values
                 crc == readArr[98] + readArr[99] * 256  // checksum is correct
                 ) { return false; }
@@ -77,7 +80,7 @@ namespace AccumulatorMonitorM017.Backend
 
             if (buffer[100] != 0xFF ||
                 buffer[101] != 0xFE ||     // end characters in the correct place
-                buffer.Length != 102 ||     // length is correct
+                buffer.Length != 104 ||     // length is correct
                 buffer[0] > 5 ||           // segment indicator is reporting reasonable values
                 crc != buffer[98] + buffer[99] * 256  // checksum is correct
                 )
@@ -96,6 +99,9 @@ namespace AccumulatorMonitorM017.Backend
         public event frameRecieved OnFrameUpdated;
         public delegate void frameRecieved(DataFrame f, SerialInterface sender);
 
+        /// <summary>
+        /// Event raised when the buffer is updated
+        /// </summary>
         private event bufferUpdated OnBufferUpdated;
         private delegate void bufferUpdated(byte[] buffer);
 
@@ -124,12 +130,7 @@ namespace AccumulatorMonitorM017.Backend
         /// <summary>
         /// The number of consecutive read failures
         /// </summary>
-        public int ConsecutiveReadFails
-        {
-            get { return _consecutiveReadFails; }
-            private set { _consecutiveReadFails = value; }
-        }
-        private int _consecutiveReadFails = 0;
+        public int ConsecutiveReadFails = 0;
 
         /// <summary>
         /// The last recieved frame from this interface
@@ -140,6 +141,8 @@ namespace AccumulatorMonitorM017.Backend
             private set { lastFrame = value; }
         }
         private DataFrame lastFrame;
+
+        #region Initialisation Connection and Disconnection
 
         /// <summary>
         /// Constructor creates a serial port on the selected port
@@ -172,7 +175,7 @@ namespace AccumulatorMonitorM017.Backend
             serial = new SerialPort(portName, baudrate, Parity.None, 8, StopBits.One);
 
             // set the recieved bytes threshold
-            serial.ReceivedBytesThreshold = 102;
+            serial.ReceivedBytesThreshold = BufferSize;
             serial.Open();
 
             // discard buffers
@@ -200,7 +203,20 @@ namespace AccumulatorMonitorM017.Backend
                 OnBufferUpdated += BufferUpdated;
             }
         }
-        
+
+        /// <summary>
+        /// Closes the serial port and disposes the SerialPort object
+        /// </summary>
+        public void Close()
+        {
+            serial.Close();
+            serial.Dispose();
+        }
+
+        #endregion
+
+        #region Recieving Parsing and Handling Data
+
         /// <summary>
         /// Event handler for when the input buffer is updated
         /// </summary>
@@ -214,18 +230,14 @@ namespace AccumulatorMonitorM017.Backend
                 LastFrame = f;
                 OnFrameUpdated?.Invoke(f, this);
                 ConsecutiveReadFails = 0;
+                return;
             }
 
-            ConsecutiveReadFails++;
-        }
+            #if DEBUG
+            Console.WriteLine("Buffer Read failed");
+            #endif
 
-        /// <summary>
-        /// Closes the serial port and disposes the SerialPort object
-        /// </summary>
-        public void Close()
-        {
-            serial.Close();
-            serial.Dispose();
+            CleanInBuffer();
         }
 
         /// <summary>
@@ -239,8 +251,8 @@ namespace AccumulatorMonitorM017.Backend
             try
             {
                 //string read = serial.ReadLine();
-                byte[] buffer = new byte[102];
-                serial.Read(buffer, 0, 102);
+                byte[] buffer = new byte[BufferSize];
+                serial.Read(buffer, 0, BufferSize);
                 OnBufferUpdated?.Invoke(buffer);
             }
             catch(Exception err)
@@ -249,6 +261,50 @@ namespace AccumulatorMonitorM017.Backend
             }
 
         }
+
+        #endregion
+
+        #region Clearing Buffer
+
+        private Timer WipeInputBufferTimer;
+        private int wipeCount = 0;
+
+        /// <summary>
+        /// Starts the process of wiping the input buffer when something goes wrong
+        /// </summary>
+        private void CleanInBuffer()
+        {
+            WipeInputBufferTimer = new Timer(30);
+            
+            WipeInputBufferTimer.Elapsed += WipeBuffer;
+            WipeInputBufferTimer.Start();
+            #if DEBUG
+            Console.WriteLine("Clearing Input Buffer");
+            #endif
+
+        }
+
+        /// <summary>
+        /// Event handler for the timer initialised by CleanInBuffer(), wipes the input buffer
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void WipeBuffer(object sender, ElapsedEventArgs e)
+        {
+            if(wipeCount < 5)
+            {
+                serial.DiscardInBuffer();
+                wipeCount++;
+            }
+            else
+            {
+                wipeCount = 0;
+                WipeInputBufferTimer.Elapsed -= WipeBuffer;
+                WipeInputBufferTimer.Stop();
+            }
+        }
+
+        #endregion
 
         #endregion
 
