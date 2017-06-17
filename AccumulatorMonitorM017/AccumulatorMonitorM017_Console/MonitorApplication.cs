@@ -302,6 +302,24 @@ namespace AccumulatorMonitorM017.console
                 }
                 S += s + Environment.NewLine;
             }
+            S += "Temperatures:" + Environment.NewLine;
+
+            // foreach cell
+            for (int i = 0; i < 24; i++)
+            {
+                string s = "";
+
+                // foreach segment
+                for (int j = 0; j < 6; j++)
+                {
+                    if (acc.LastFrames.ContainsKey(j))
+                    {
+                        s += "S" + j.ToString() + "C" + i.ToString() + ": " + acc.LastFrames[j].Temperatures[i].ToString("0.00") + "C\t";
+                    }
+                }
+                S += s + Environment.NewLine;
+            }
+
             Console.Clear();
             Console.Write(S);
         }
