@@ -17,6 +17,11 @@ namespace AccumulatorMonitorM017.Backend
         private SerialInterface serial;
 
         /// <summary>
+        /// 
+        /// </summary>
+        private DataLogger dataLogger;
+
+        /// <summary>
         /// The last frames for each segment, keyed by segment number
         /// </summary>
         public Dictionary<int, DataFrame> LastFrames = new Dictionary<int, DataFrame>();
@@ -42,6 +47,7 @@ namespace AccumulatorMonitorM017.Backend
         {
             AutoConnectTimer = new Timer(500);
             AutoConnectTimer.Elapsed += AutoConnectTimer_Elapsed;
+            dataLogger = new DataLogger();
         }
 
         #region Methods
@@ -108,6 +114,8 @@ namespace AccumulatorMonitorM017.Backend
             {
                 LastFrames.Add(f.segmentID, f);
             }
+
+            dataLogger.Log(f);
 
             this.OnFrameRecived?.Invoke(f,sender);
         }

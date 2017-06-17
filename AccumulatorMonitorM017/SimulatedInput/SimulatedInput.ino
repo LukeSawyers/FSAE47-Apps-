@@ -23,7 +23,7 @@ void setup() {
 
 void loop() {
   // put your main code here, to run repeatedly:
-  delay(2000);
+  delay(200);
   SetArr();
   Serial.write(sendArr, arrLen);
   
@@ -35,7 +35,7 @@ void InitArr() {
   }
 
   // length of remaining message does not change
-  sendArr[1] = 100;
+  sendArr[1] = 102;
 
   for(int i = 2; i < 50; i = i + 2) {
 

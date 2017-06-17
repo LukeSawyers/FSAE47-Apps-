@@ -14,8 +14,6 @@ namespace AccumulatorMonitorM017.console
 
         private string Cmd = "";
 
-        
-
         /// <summary>
         /// Accumulator interface
         /// </summary>
@@ -286,7 +284,8 @@ namespace AccumulatorMonitorM017.console
         /// </summary>
         private void PrintStream()
         {
-            Console.WriteLine("Voltages:");
+            string S = "";
+            S += "Voltages:" + Environment.NewLine;
             
             // foreach cell
             for(int i = 0; i < 24; i++)
@@ -301,8 +300,10 @@ namespace AccumulatorMonitorM017.console
                         s += "S" + j.ToString() + "C" + i.ToString() + ": " + acc.LastFrames[j].Voltages[i].ToString("0.00") + "V\t";
                     }
                 }
-                Console.WriteLine(s);
+                S += s + Environment.NewLine;
             }
+            Console.Clear();
+            Console.Write(S);
         }
 
         // When autoconnect is successful

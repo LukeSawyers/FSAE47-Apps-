@@ -14,3 +14,19 @@ C:\Users\luke_\Desktop\FSAE Apps\AccumulatorMonitorM017\AccumulatorMonitorM017\o
 C:\Users\luke_\Desktop\FSAE Apps\AccumulatorMonitorM017\AccumulatorMonitorM017\obj\Debug\AccumulatorMonitorM017.GUI.csproj.GenerateResource.Cache
 C:\Users\luke_\Desktop\FSAE Apps\AccumulatorMonitorM017\AccumulatorMonitorM017\obj\Debug\AccumulatorMonitorM017.exe
 C:\Users\luke_\Desktop\FSAE Apps\AccumulatorMonitorM017\AccumulatorMonitorM017\obj\Debug\AccumulatorMonitorM017.pdb
+E:\Repos\FSAE47-Apps-\AccumulatorMonitorM017\AccumulatorMonitorM017\bin\Debug\AccumulatorMonitorM017.exe.config
+E:\Repos\FSAE47-Apps-\AccumulatorMonitorM017\AccumulatorMonitorM017\bin\Debug\AccumulatorMonitorM017.exe
+E:\Repos\FSAE47-Apps-\AccumulatorMonitorM017\AccumulatorMonitorM017\bin\Debug\AccumulatorMonitorM017.pdb
+E:\Repos\FSAE47-Apps-\AccumulatorMonitorM017\AccumulatorMonitorM017\bin\Debug\AccumulatorMonitorM017_Backend.dll
+E:\Repos\FSAE47-Apps-\AccumulatorMonitorM017\AccumulatorMonitorM017\bin\Debug\AccumulatorMonitorM017_Backend.pdb
+E:\Repos\FSAE47-Apps-\AccumulatorMonitorM017\AccumulatorMonitorM017\obj\Debug\AccumulatorMonitorM017.GUI.csprojResolveAssemblyReference.cache
+E:\Repos\FSAE47-Apps-\AccumulatorMonitorM017\AccumulatorMonitorM017\obj\Debug\MainWindow.g.cs
+E:\Repos\FSAE47-Apps-\AccumulatorMonitorM017\AccumulatorMonitorM017\obj\Debug\App.g.cs
+E:\Repos\FSAE47-Apps-\AccumulatorMonitorM017\AccumulatorMonitorM017\obj\Debug\AccumulatorMonitorM017_MarkupCompile.cache
+E:\Repos\FSAE47-Apps-\AccumulatorMonitorM017\AccumulatorMonitorM017\obj\Debug\AccumulatorMonitorM017_MarkupCompile.lref
+E:\Repos\FSAE47-Apps-\AccumulatorMonitorM017\AccumulatorMonitorM017\obj\Debug\MainWindow.baml
+E:\Repos\FSAE47-Apps-\AccumulatorMonitorM017\AccumulatorMonitorM017\obj\Debug\AccumulatorMonitorM017.g.resources
+E:\Repos\FSAE47-Apps-\AccumulatorMonitorM017\AccumulatorMonitorM017\obj\Debug\AccumulatorMonitorM017.Properties.Resources.resources
+E:\Repos\FSAE47-Apps-\AccumulatorMonitorM017\AccumulatorMonitorM017\obj\Debug\AccumulatorMonitorM017.GUI.csproj.GenerateResource.Cache
+E:\Repos\FSAE47-Apps-\AccumulatorMonitorM017\AccumulatorMonitorM017\obj\Debug\AccumulatorMonitorM017.exe
+E:\Repos\FSAE47-Apps-\AccumulatorMonitorM017\AccumulatorMonitorM017\obj\Debug\AccumulatorMonitorM017.pdb

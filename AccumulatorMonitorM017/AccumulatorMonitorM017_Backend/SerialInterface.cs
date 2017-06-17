@@ -27,7 +27,6 @@ namespace AccumulatorMonitorM017.Backend
             return SerialPort.GetPortNames();
         }
 
-
         /// <summary>
         /// Collection of interfaces, referenced by their names
         /// </summary>
@@ -37,32 +36,6 @@ namespace AccumulatorMonitorM017.Backend
         /// indicates that the static elements have been initialised
         /// </summary>
         public static bool Initialised = false;
-
-        /// <summary>
-        /// Returns a bool indicating that the recieved string is good
-        /// </summary>
-        /// <param name="s"></param>
-        /// <returns></returns>
-        public static bool StringIsGood(string s)
-        {
-            char[] readArr = s.ToArray();
-
-            ushort crc = 0;
-
-            for(int i = 2; i < 98; i += 2)
-            {
-                crc += (ushort)(readArr[i] + (ushort)(256 * readArr[i + 1]));
-            }
-
-            if (readArr[100] != 0xFF    ||
-                readArr[101] != 0xFE    ||     // end characters in the correct place
-                readArr.Length != BufferSize ||     // length is correct
-                readArr[0] > 5    ||           // segment indicator is reporting reasonable values
-                crc == readArr[98] + readArr[99] * 256  // checksum is correct
-                ) { return false; }
-
-            return true;
-        }
 
         /// <summary>
         /// Returns a bool indicating that the recieved buffer is good
@@ -80,7 +53,7 @@ namespace AccumulatorMonitorM017.Backend
 
             if (buffer[100] != 0xFF ||
                 buffer[101] != 0xFE ||     // end characters in the correct place
-                buffer.Length != 104 ||     // length is correct
+                buffer.Length != BufferSize ||     // length is correct
                 buffer[0] > 5 ||           // segment indicator is reporting reasonable values
                 crc != buffer[98] + buffer[99] * 256  // checksum is correct
                 )

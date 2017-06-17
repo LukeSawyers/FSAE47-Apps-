@@ -50,6 +50,8 @@
     </Otherwise>
   </Choose>
   <ItemGroup>
+    <Compile Include="DataLoggerTests.cs" />
+    <Compile Include="MockDataFrameFactory.cs" />
     <Compile Include="SerialInterfaceTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

@@ -41,6 +41,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AccumulatorInterface.cs" />
+    <Compile Include="DataLogger.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SerialInterface.cs" />
   </ItemGroup>
