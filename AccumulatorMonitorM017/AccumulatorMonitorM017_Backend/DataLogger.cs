@@ -6,8 +6,29 @@ using System.Threading.Tasks;
 
 namespace AccumulatorMonitorM017.Backend
 {
-    public static class DataLogger
+    /// <summary>
+    /// Provides all the functionality for logging incoming data
+    /// </summary>
+    class DataLogger
     {
-        
+        public DataLogger()
+        {
+
+        }
+
+        public DataLogger(string fileLocation)
+        {
+
+        }
+
+        public void Log(DataFrame f)
+        {
+
+        }
+
+        public void Log(AccumulatorInterface acc)
+        {
+
+        }
     }
 }
