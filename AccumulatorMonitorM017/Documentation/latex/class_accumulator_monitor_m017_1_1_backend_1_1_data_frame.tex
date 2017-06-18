@@ -1,0 +1,171 @@
+\hypertarget{class_accumulator_monitor_m017_1_1_backend_1_1_data_frame}{}\section{Accumulator\+Monitor\+M017.\+Backend.\+Data\+Frame Class Reference}
+\label{class_accumulator_monitor_m017_1_1_backend_1_1_data_frame}\index{Accumulator\+Monitor\+M017.\+Backend.\+Data\+Frame@{Accumulator\+Monitor\+M017.\+Backend.\+Data\+Frame}}
+
+
+class representing a single frame  
+
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_accumulator_monitor_m017_1_1_backend_1_1_data_frame_af686025d030bf0cc8c6523bf236fd1e6}{Data\+Frame} (string read\+String)
+\begin{DoxyCompactList}\small\item\em Constructor \end{DoxyCompactList}\item 
+\hyperlink{class_accumulator_monitor_m017_1_1_backend_1_1_data_frame_ae9521271ad5740cc5b02e6eefa460133}{Data\+Frame} (byte\mbox{[}$\,$\mbox{]} arr)
+\begin{DoxyCompactList}\small\item\em Constructor \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_accumulator_monitor_m017_1_1_backend_1_1_data_frame_a9b13970bde6af8ed711329fbaafd0f3b}\label{class_accumulator_monitor_m017_1_1_backend_1_1_data_frame_a9b13970bde6af8ed711329fbaafd0f3b}} 
+static bool {\bfseries Is\+Valid} (string read\+String)
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{class_accumulator_monitor_m017_1_1_backend_1_1_data_frame_a4fcbe51325eb48b630b97203cdeb3881}{segment\+ID}
+\begin{DoxyCompactList}\small\item\em The ID of the segment \end{DoxyCompactList}\item 
+float \mbox{[}$\,$\mbox{]} \hyperlink{class_accumulator_monitor_m017_1_1_backend_1_1_data_frame_a0fa7302afaeb967b384a15dd0fc78a45}{Voltages} = new float\mbox{[}24\mbox{]}
+\begin{DoxyCompactList}\small\item\em The Voltages in this segment \end{DoxyCompactList}\item 
+float \mbox{[}$\,$\mbox{]} \hyperlink{class_accumulator_monitor_m017_1_1_backend_1_1_data_frame_a5ad50f192c05e22c4719187f005d2edb}{Temperatures} = new float\mbox{[}24\mbox{]}
+\begin{DoxyCompactList}\small\item\em The Temperatures in this segment \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+float \hyperlink{class_accumulator_monitor_m017_1_1_backend_1_1_data_frame_a424a2aec4d15a992d31024d6e16ebb51}{max\+Voltage}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Maximum Voltage in this segment \end{DoxyCompactList}\item 
+float \hyperlink{class_accumulator_monitor_m017_1_1_backend_1_1_data_frame_ae2f7d167459a4adbcb45c29d53648f8f}{min\+Voltage}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Minimum voltage in this segment \end{DoxyCompactList}\item 
+float \hyperlink{class_accumulator_monitor_m017_1_1_backend_1_1_data_frame_af589b31836fc8f36f661244ca1310773}{max\+Temp}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Maximum temperature in this segment \end{DoxyCompactList}\item 
+float \hyperlink{class_accumulator_monitor_m017_1_1_backend_1_1_data_frame_ad4ec44cca9cbbdf2457c271e6b833f06}{min\+Temp}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Minimum temperature in this segment \end{DoxyCompactList}\item 
+float \hyperlink{class_accumulator_monitor_m017_1_1_backend_1_1_data_frame_a93abdfffbbc9910bfba61222e6889366}{voltage\+Range}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em The voltage range within this segment \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+class representing a single frame 
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_accumulator_monitor_m017_1_1_backend_1_1_data_frame_af686025d030bf0cc8c6523bf236fd1e6}\label{class_accumulator_monitor_m017_1_1_backend_1_1_data_frame_af686025d030bf0cc8c6523bf236fd1e6}} 
+\index{Accumulator\+Monitor\+M017\+::\+Backend\+::\+Data\+Frame@{Accumulator\+Monitor\+M017\+::\+Backend\+::\+Data\+Frame}!Data\+Frame@{Data\+Frame}}
+\index{Data\+Frame@{Data\+Frame}!Accumulator\+Monitor\+M017\+::\+Backend\+::\+Data\+Frame@{Accumulator\+Monitor\+M017\+::\+Backend\+::\+Data\+Frame}}
+\subsubsection{\texorpdfstring{Data\+Frame()}{DataFrame()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Accumulator\+Monitor\+M017.\+Backend.\+Data\+Frame.\+Data\+Frame (\begin{DoxyParamCaption}\item[{string}]{read\+String }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Constructor 
+
+
+\begin{DoxyParams}{Parameters}
+{\em read\+String} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_accumulator_monitor_m017_1_1_backend_1_1_data_frame_ae9521271ad5740cc5b02e6eefa460133}\label{class_accumulator_monitor_m017_1_1_backend_1_1_data_frame_ae9521271ad5740cc5b02e6eefa460133}} 
+\index{Accumulator\+Monitor\+M017\+::\+Backend\+::\+Data\+Frame@{Accumulator\+Monitor\+M017\+::\+Backend\+::\+Data\+Frame}!Data\+Frame@{Data\+Frame}}
+\index{Data\+Frame@{Data\+Frame}!Accumulator\+Monitor\+M017\+::\+Backend\+::\+Data\+Frame@{Accumulator\+Monitor\+M017\+::\+Backend\+::\+Data\+Frame}}
+\subsubsection{\texorpdfstring{Data\+Frame()}{DataFrame()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily Accumulator\+Monitor\+M017.\+Backend.\+Data\+Frame.\+Data\+Frame (\begin{DoxyParamCaption}\item[{byte \mbox{[}$\,$\mbox{]}}]{arr }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Constructor 
+
+
+\begin{DoxyParams}{Parameters}
+{\em arr} & \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{class_accumulator_monitor_m017_1_1_backend_1_1_data_frame_a4fcbe51325eb48b630b97203cdeb3881}\label{class_accumulator_monitor_m017_1_1_backend_1_1_data_frame_a4fcbe51325eb48b630b97203cdeb3881}} 
+\index{Accumulator\+Monitor\+M017\+::\+Backend\+::\+Data\+Frame@{Accumulator\+Monitor\+M017\+::\+Backend\+::\+Data\+Frame}!segment\+ID@{segment\+ID}}
+\index{segment\+ID@{segment\+ID}!Accumulator\+Monitor\+M017\+::\+Backend\+::\+Data\+Frame@{Accumulator\+Monitor\+M017\+::\+Backend\+::\+Data\+Frame}}
+\subsubsection{\texorpdfstring{segment\+ID}{segmentID}}
+{\footnotesize\ttfamily int Accumulator\+Monitor\+M017.\+Backend.\+Data\+Frame.\+segment\+ID}
+
+
+
+The ID of the segment 
+
+\mbox{\Hypertarget{class_accumulator_monitor_m017_1_1_backend_1_1_data_frame_a5ad50f192c05e22c4719187f005d2edb}\label{class_accumulator_monitor_m017_1_1_backend_1_1_data_frame_a5ad50f192c05e22c4719187f005d2edb}} 
+\index{Accumulator\+Monitor\+M017\+::\+Backend\+::\+Data\+Frame@{Accumulator\+Monitor\+M017\+::\+Backend\+::\+Data\+Frame}!Temperatures@{Temperatures}}
+\index{Temperatures@{Temperatures}!Accumulator\+Monitor\+M017\+::\+Backend\+::\+Data\+Frame@{Accumulator\+Monitor\+M017\+::\+Backend\+::\+Data\+Frame}}
+\subsubsection{\texorpdfstring{Temperatures}{Temperatures}}
+{\footnotesize\ttfamily float \mbox{[}$\,$\mbox{]} Accumulator\+Monitor\+M017.\+Backend.\+Data\+Frame.\+Temperatures = new float\mbox{[}24\mbox{]}}
+
+
+
+The Temperatures in this segment 
+
+\mbox{\Hypertarget{class_accumulator_monitor_m017_1_1_backend_1_1_data_frame_a0fa7302afaeb967b384a15dd0fc78a45}\label{class_accumulator_monitor_m017_1_1_backend_1_1_data_frame_a0fa7302afaeb967b384a15dd0fc78a45}} 
+\index{Accumulator\+Monitor\+M017\+::\+Backend\+::\+Data\+Frame@{Accumulator\+Monitor\+M017\+::\+Backend\+::\+Data\+Frame}!Voltages@{Voltages}}
+\index{Voltages@{Voltages}!Accumulator\+Monitor\+M017\+::\+Backend\+::\+Data\+Frame@{Accumulator\+Monitor\+M017\+::\+Backend\+::\+Data\+Frame}}
+\subsubsection{\texorpdfstring{Voltages}{Voltages}}
+{\footnotesize\ttfamily float \mbox{[}$\,$\mbox{]} Accumulator\+Monitor\+M017.\+Backend.\+Data\+Frame.\+Voltages = new float\mbox{[}24\mbox{]}}
+
+
+
+The Voltages in this segment 
+
+
+
+\subsection{Property Documentation}
+\mbox{\Hypertarget{class_accumulator_monitor_m017_1_1_backend_1_1_data_frame_af589b31836fc8f36f661244ca1310773}\label{class_accumulator_monitor_m017_1_1_backend_1_1_data_frame_af589b31836fc8f36f661244ca1310773}} 
+\index{Accumulator\+Monitor\+M017\+::\+Backend\+::\+Data\+Frame@{Accumulator\+Monitor\+M017\+::\+Backend\+::\+Data\+Frame}!max\+Temp@{max\+Temp}}
+\index{max\+Temp@{max\+Temp}!Accumulator\+Monitor\+M017\+::\+Backend\+::\+Data\+Frame@{Accumulator\+Monitor\+M017\+::\+Backend\+::\+Data\+Frame}}
+\subsubsection{\texorpdfstring{max\+Temp}{maxTemp}}
+{\footnotesize\ttfamily float Accumulator\+Monitor\+M017.\+Backend.\+Data\+Frame.\+max\+Temp\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+Maximum temperature in this segment 
+
+\mbox{\Hypertarget{class_accumulator_monitor_m017_1_1_backend_1_1_data_frame_a424a2aec4d15a992d31024d6e16ebb51}\label{class_accumulator_monitor_m017_1_1_backend_1_1_data_frame_a424a2aec4d15a992d31024d6e16ebb51}} 
+\index{Accumulator\+Monitor\+M017\+::\+Backend\+::\+Data\+Frame@{Accumulator\+Monitor\+M017\+::\+Backend\+::\+Data\+Frame}!max\+Voltage@{max\+Voltage}}
+\index{max\+Voltage@{max\+Voltage}!Accumulator\+Monitor\+M017\+::\+Backend\+::\+Data\+Frame@{Accumulator\+Monitor\+M017\+::\+Backend\+::\+Data\+Frame}}
+\subsubsection{\texorpdfstring{max\+Voltage}{maxVoltage}}
+{\footnotesize\ttfamily float Accumulator\+Monitor\+M017.\+Backend.\+Data\+Frame.\+max\+Voltage\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+Maximum Voltage in this segment 
+
+\mbox{\Hypertarget{class_accumulator_monitor_m017_1_1_backend_1_1_data_frame_ad4ec44cca9cbbdf2457c271e6b833f06}\label{class_accumulator_monitor_m017_1_1_backend_1_1_data_frame_ad4ec44cca9cbbdf2457c271e6b833f06}} 
+\index{Accumulator\+Monitor\+M017\+::\+Backend\+::\+Data\+Frame@{Accumulator\+Monitor\+M017\+::\+Backend\+::\+Data\+Frame}!min\+Temp@{min\+Temp}}
+\index{min\+Temp@{min\+Temp}!Accumulator\+Monitor\+M017\+::\+Backend\+::\+Data\+Frame@{Accumulator\+Monitor\+M017\+::\+Backend\+::\+Data\+Frame}}
+\subsubsection{\texorpdfstring{min\+Temp}{minTemp}}
+{\footnotesize\ttfamily float Accumulator\+Monitor\+M017.\+Backend.\+Data\+Frame.\+min\+Temp\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+Minimum temperature in this segment 
+
+\mbox{\Hypertarget{class_accumulator_monitor_m017_1_1_backend_1_1_data_frame_ae2f7d167459a4adbcb45c29d53648f8f}\label{class_accumulator_monitor_m017_1_1_backend_1_1_data_frame_ae2f7d167459a4adbcb45c29d53648f8f}} 
+\index{Accumulator\+Monitor\+M017\+::\+Backend\+::\+Data\+Frame@{Accumulator\+Monitor\+M017\+::\+Backend\+::\+Data\+Frame}!min\+Voltage@{min\+Voltage}}
+\index{min\+Voltage@{min\+Voltage}!Accumulator\+Monitor\+M017\+::\+Backend\+::\+Data\+Frame@{Accumulator\+Monitor\+M017\+::\+Backend\+::\+Data\+Frame}}
+\subsubsection{\texorpdfstring{min\+Voltage}{minVoltage}}
+{\footnotesize\ttfamily float Accumulator\+Monitor\+M017.\+Backend.\+Data\+Frame.\+min\+Voltage\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+Minimum voltage in this segment 
+
+\mbox{\Hypertarget{class_accumulator_monitor_m017_1_1_backend_1_1_data_frame_a93abdfffbbc9910bfba61222e6889366}\label{class_accumulator_monitor_m017_1_1_backend_1_1_data_frame_a93abdfffbbc9910bfba61222e6889366}} 
+\index{Accumulator\+Monitor\+M017\+::\+Backend\+::\+Data\+Frame@{Accumulator\+Monitor\+M017\+::\+Backend\+::\+Data\+Frame}!voltage\+Range@{voltage\+Range}}
+\index{voltage\+Range@{voltage\+Range}!Accumulator\+Monitor\+M017\+::\+Backend\+::\+Data\+Frame@{Accumulator\+Monitor\+M017\+::\+Backend\+::\+Data\+Frame}}
+\subsubsection{\texorpdfstring{voltage\+Range}{voltageRange}}
+{\footnotesize\ttfamily float Accumulator\+Monitor\+M017.\+Backend.\+Data\+Frame.\+voltage\+Range\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+The voltage range within this segment 
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+E\+:/\+Repos/\+F\+S\+A\+E47-\/\+Apps-\//\+Accumulator\+Monitor\+M017/\+Accumulator\+Monitor\+M017\+\_\+\+Backend/Serial\+Interface.\+cs\end{DoxyCompactItemize}

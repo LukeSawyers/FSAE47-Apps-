@@ -1,0 +1,223 @@
+\hypertarget{class_accumulator_monitor_m017_1_1_backend_1_1_serial_interface}{}\section{Accumulator\+Monitor\+M017.\+Backend.\+Serial\+Interface Class Reference}
+\label{class_accumulator_monitor_m017_1_1_backend_1_1_serial_interface}\index{Accumulator\+Monitor\+M017.\+Backend.\+Serial\+Interface@{Accumulator\+Monitor\+M017.\+Backend.\+Serial\+Interface}}
+
+
+Serial layer to implement basic serial port funcitonality  
+
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_accumulator_monitor_m017_1_1_backend_1_1_serial_interface_a75829fb33c85165568cc2474c9332676}\label{class_accumulator_monitor_m017_1_1_backend_1_1_serial_interface_a75829fb33c85165568cc2474c9332676}} 
+delegate void {\bfseries frame\+Recieved} (\hyperlink{class_accumulator_monitor_m017_1_1_backend_1_1_data_frame}{Data\+Frame} f, \hyperlink{class_accumulator_monitor_m017_1_1_backend_1_1_serial_interface}{Serial\+Interface} sender)
+\item 
+\hyperlink{class_accumulator_monitor_m017_1_1_backend_1_1_serial_interface_a06cd4b9b4f2e6f592c215690a4926078}{Serial\+Interface} (string port\+Name)
+\begin{DoxyCompactList}\small\item\em Constructor creates a serial port on the selected port \end{DoxyCompactList}\item 
+\hyperlink{class_accumulator_monitor_m017_1_1_backend_1_1_serial_interface_a7a39fd8741e9c86ace8cf1476a889fdc}{Serial\+Interface} (string port\+Name, int baud\+Rate)
+\begin{DoxyCompactList}\small\item\em Constructor creates a serial port on the selected port with a specified baudrate \end{DoxyCompactList}\item 
+void \hyperlink{class_accumulator_monitor_m017_1_1_backend_1_1_serial_interface_a87f42f4a08951d6dbbdc7f4b6532d3d4}{Close} ()
+\begin{DoxyCompactList}\small\item\em Closes the serial port and disposes the Serial\+Port object \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static string \mbox{[}$\,$\mbox{]} \hyperlink{class_accumulator_monitor_m017_1_1_backend_1_1_serial_interface_a1c632b2dbcecc22017f24693e7bdbcce}{Get\+Available\+Ports} ()
+\begin{DoxyCompactList}\small\item\em Gets the available ports for this computer \end{DoxyCompactList}\item 
+static bool \hyperlink{class_accumulator_monitor_m017_1_1_backend_1_1_serial_interface_a6e1ce1196642765d615e0e137bd6654c}{Buffer\+Is\+Good} (byte\mbox{[}$\,$\mbox{]} buffer)
+\begin{DoxyCompactList}\small\item\em Returns a bool indicating that the recieved buffer is good \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{class_accumulator_monitor_m017_1_1_backend_1_1_serial_interface_aa3cfa9b63909cd75926e190253e2abee}{Consecutive\+Read\+Fails} = 0
+\begin{DoxyCompactList}\small\item\em The number of consecutive read failures \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static Dictionary$<$ string, \hyperlink{class_accumulator_monitor_m017_1_1_backend_1_1_serial_interface}{Serial\+Interface} $>$ \hyperlink{class_accumulator_monitor_m017_1_1_backend_1_1_serial_interface_ad1557a0bd747db3c1a8e14b57447b2e2}{Open\+Interfaces} = new Dictionary$<$string, \hyperlink{class_accumulator_monitor_m017_1_1_backend_1_1_serial_interface}{Serial\+Interface}$>$()
+\begin{DoxyCompactList}\small\item\em Collection of interfaces, referenced by their names \end{DoxyCompactList}\item 
+static bool \hyperlink{class_accumulator_monitor_m017_1_1_backend_1_1_serial_interface_a2586c85ca5a05e10d9f0c323bf4de3af}{Initialised} = false
+\begin{DoxyCompactList}\small\item\em indicates that the static elements have been initialised \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+bool \hyperlink{class_accumulator_monitor_m017_1_1_backend_1_1_serial_interface_a499984b32652d6db5cd38f813e6d1092}{Is\+Open}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Returns the open status of this serial connection \end{DoxyCompactList}\item 
+string \hyperlink{class_accumulator_monitor_m017_1_1_backend_1_1_serial_interface_aacec26c3a47343c18670be22ab147cea}{Name}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em The name of the port \end{DoxyCompactList}\item 
+\hyperlink{class_accumulator_monitor_m017_1_1_backend_1_1_data_frame}{Data\+Frame} \hyperlink{class_accumulator_monitor_m017_1_1_backend_1_1_serial_interface_afda341a3c146ca43b4b88bcf00130886}{Last\+Frame}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em The last recieved frame from this interface \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Events}
+\begin{DoxyCompactItemize}
+\item 
+frame\+Recieved \hyperlink{class_accumulator_monitor_m017_1_1_backend_1_1_serial_interface_aa1509130b84ccf49a834438eb9498bdf}{On\+Frame\+Updated}
+\begin{DoxyCompactList}\small\item\em Event raised when a frame is recieved \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Serial layer to implement basic serial port funcitonality 
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_accumulator_monitor_m017_1_1_backend_1_1_serial_interface_a06cd4b9b4f2e6f592c215690a4926078}\label{class_accumulator_monitor_m017_1_1_backend_1_1_serial_interface_a06cd4b9b4f2e6f592c215690a4926078}} 
+\index{Accumulator\+Monitor\+M017\+::\+Backend\+::\+Serial\+Interface@{Accumulator\+Monitor\+M017\+::\+Backend\+::\+Serial\+Interface}!Serial\+Interface@{Serial\+Interface}}
+\index{Serial\+Interface@{Serial\+Interface}!Accumulator\+Monitor\+M017\+::\+Backend\+::\+Serial\+Interface@{Accumulator\+Monitor\+M017\+::\+Backend\+::\+Serial\+Interface}}
+\subsubsection{\texorpdfstring{Serial\+Interface()}{SerialInterface()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Accumulator\+Monitor\+M017.\+Backend.\+Serial\+Interface.\+Serial\+Interface (\begin{DoxyParamCaption}\item[{string}]{port\+Name }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Constructor creates a serial port on the selected port 
+
+
+\begin{DoxyParams}{Parameters}
+{\em port\+Name} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_accumulator_monitor_m017_1_1_backend_1_1_serial_interface_a7a39fd8741e9c86ace8cf1476a889fdc}\label{class_accumulator_monitor_m017_1_1_backend_1_1_serial_interface_a7a39fd8741e9c86ace8cf1476a889fdc}} 
+\index{Accumulator\+Monitor\+M017\+::\+Backend\+::\+Serial\+Interface@{Accumulator\+Monitor\+M017\+::\+Backend\+::\+Serial\+Interface}!Serial\+Interface@{Serial\+Interface}}
+\index{Serial\+Interface@{Serial\+Interface}!Accumulator\+Monitor\+M017\+::\+Backend\+::\+Serial\+Interface@{Accumulator\+Monitor\+M017\+::\+Backend\+::\+Serial\+Interface}}
+\subsubsection{\texorpdfstring{Serial\+Interface()}{SerialInterface()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily Accumulator\+Monitor\+M017.\+Backend.\+Serial\+Interface.\+Serial\+Interface (\begin{DoxyParamCaption}\item[{string}]{port\+Name,  }\item[{int}]{baud\+Rate }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Constructor creates a serial port on the selected port with a specified baudrate 
+
+
+\begin{DoxyParams}{Parameters}
+{\em port\+Name} & \\
+\hline
+{\em baud\+Rate} & \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{class_accumulator_monitor_m017_1_1_backend_1_1_serial_interface_a6e1ce1196642765d615e0e137bd6654c}\label{class_accumulator_monitor_m017_1_1_backend_1_1_serial_interface_a6e1ce1196642765d615e0e137bd6654c}} 
+\index{Accumulator\+Monitor\+M017\+::\+Backend\+::\+Serial\+Interface@{Accumulator\+Monitor\+M017\+::\+Backend\+::\+Serial\+Interface}!Buffer\+Is\+Good@{Buffer\+Is\+Good}}
+\index{Buffer\+Is\+Good@{Buffer\+Is\+Good}!Accumulator\+Monitor\+M017\+::\+Backend\+::\+Serial\+Interface@{Accumulator\+Monitor\+M017\+::\+Backend\+::\+Serial\+Interface}}
+\subsubsection{\texorpdfstring{Buffer\+Is\+Good()}{BufferIsGood()}}
+{\footnotesize\ttfamily static bool Accumulator\+Monitor\+M017.\+Backend.\+Serial\+Interface.\+Buffer\+Is\+Good (\begin{DoxyParamCaption}\item[{byte \mbox{[}$\,$\mbox{]}}]{buffer }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Returns a bool indicating that the recieved buffer is good 
+
+
+\begin{DoxyParams}{Parameters}
+{\em s} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_accumulator_monitor_m017_1_1_backend_1_1_serial_interface_a87f42f4a08951d6dbbdc7f4b6532d3d4}\label{class_accumulator_monitor_m017_1_1_backend_1_1_serial_interface_a87f42f4a08951d6dbbdc7f4b6532d3d4}} 
+\index{Accumulator\+Monitor\+M017\+::\+Backend\+::\+Serial\+Interface@{Accumulator\+Monitor\+M017\+::\+Backend\+::\+Serial\+Interface}!Close@{Close}}
+\index{Close@{Close}!Accumulator\+Monitor\+M017\+::\+Backend\+::\+Serial\+Interface@{Accumulator\+Monitor\+M017\+::\+Backend\+::\+Serial\+Interface}}
+\subsubsection{\texorpdfstring{Close()}{Close()}}
+{\footnotesize\ttfamily void Accumulator\+Monitor\+M017.\+Backend.\+Serial\+Interface.\+Close (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Closes the serial port and disposes the Serial\+Port object 
+
+\mbox{\Hypertarget{class_accumulator_monitor_m017_1_1_backend_1_1_serial_interface_a1c632b2dbcecc22017f24693e7bdbcce}\label{class_accumulator_monitor_m017_1_1_backend_1_1_serial_interface_a1c632b2dbcecc22017f24693e7bdbcce}} 
+\index{Accumulator\+Monitor\+M017\+::\+Backend\+::\+Serial\+Interface@{Accumulator\+Monitor\+M017\+::\+Backend\+::\+Serial\+Interface}!Get\+Available\+Ports@{Get\+Available\+Ports}}
+\index{Get\+Available\+Ports@{Get\+Available\+Ports}!Accumulator\+Monitor\+M017\+::\+Backend\+::\+Serial\+Interface@{Accumulator\+Monitor\+M017\+::\+Backend\+::\+Serial\+Interface}}
+\subsubsection{\texorpdfstring{Get\+Available\+Ports()}{GetAvailablePorts()}}
+{\footnotesize\ttfamily static string \mbox{[}$\,$\mbox{]} Accumulator\+Monitor\+M017.\+Backend.\+Serial\+Interface.\+Get\+Available\+Ports (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Gets the available ports for this computer 
+
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{class_accumulator_monitor_m017_1_1_backend_1_1_serial_interface_aa3cfa9b63909cd75926e190253e2abee}\label{class_accumulator_monitor_m017_1_1_backend_1_1_serial_interface_aa3cfa9b63909cd75926e190253e2abee}} 
+\index{Accumulator\+Monitor\+M017\+::\+Backend\+::\+Serial\+Interface@{Accumulator\+Monitor\+M017\+::\+Backend\+::\+Serial\+Interface}!Consecutive\+Read\+Fails@{Consecutive\+Read\+Fails}}
+\index{Consecutive\+Read\+Fails@{Consecutive\+Read\+Fails}!Accumulator\+Monitor\+M017\+::\+Backend\+::\+Serial\+Interface@{Accumulator\+Monitor\+M017\+::\+Backend\+::\+Serial\+Interface}}
+\subsubsection{\texorpdfstring{Consecutive\+Read\+Fails}{ConsecutiveReadFails}}
+{\footnotesize\ttfamily int Accumulator\+Monitor\+M017.\+Backend.\+Serial\+Interface.\+Consecutive\+Read\+Fails = 0}
+
+
+
+The number of consecutive read failures 
+
+\mbox{\Hypertarget{class_accumulator_monitor_m017_1_1_backend_1_1_serial_interface_a2586c85ca5a05e10d9f0c323bf4de3af}\label{class_accumulator_monitor_m017_1_1_backend_1_1_serial_interface_a2586c85ca5a05e10d9f0c323bf4de3af}} 
+\index{Accumulator\+Monitor\+M017\+::\+Backend\+::\+Serial\+Interface@{Accumulator\+Monitor\+M017\+::\+Backend\+::\+Serial\+Interface}!Initialised@{Initialised}}
+\index{Initialised@{Initialised}!Accumulator\+Monitor\+M017\+::\+Backend\+::\+Serial\+Interface@{Accumulator\+Monitor\+M017\+::\+Backend\+::\+Serial\+Interface}}
+\subsubsection{\texorpdfstring{Initialised}{Initialised}}
+{\footnotesize\ttfamily bool Accumulator\+Monitor\+M017.\+Backend.\+Serial\+Interface.\+Initialised = false\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+indicates that the static elements have been initialised 
+
+\mbox{\Hypertarget{class_accumulator_monitor_m017_1_1_backend_1_1_serial_interface_ad1557a0bd747db3c1a8e14b57447b2e2}\label{class_accumulator_monitor_m017_1_1_backend_1_1_serial_interface_ad1557a0bd747db3c1a8e14b57447b2e2}} 
+\index{Accumulator\+Monitor\+M017\+::\+Backend\+::\+Serial\+Interface@{Accumulator\+Monitor\+M017\+::\+Backend\+::\+Serial\+Interface}!Open\+Interfaces@{Open\+Interfaces}}
+\index{Open\+Interfaces@{Open\+Interfaces}!Accumulator\+Monitor\+M017\+::\+Backend\+::\+Serial\+Interface@{Accumulator\+Monitor\+M017\+::\+Backend\+::\+Serial\+Interface}}
+\subsubsection{\texorpdfstring{Open\+Interfaces}{OpenInterfaces}}
+{\footnotesize\ttfamily Dictionary$<$string, \hyperlink{class_accumulator_monitor_m017_1_1_backend_1_1_serial_interface}{Serial\+Interface}$>$ Accumulator\+Monitor\+M017.\+Backend.\+Serial\+Interface.\+Open\+Interfaces = new Dictionary$<$string, \hyperlink{class_accumulator_monitor_m017_1_1_backend_1_1_serial_interface}{Serial\+Interface}$>$()\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Collection of interfaces, referenced by their names 
+
+
+
+\subsection{Property Documentation}
+\mbox{\Hypertarget{class_accumulator_monitor_m017_1_1_backend_1_1_serial_interface_a499984b32652d6db5cd38f813e6d1092}\label{class_accumulator_monitor_m017_1_1_backend_1_1_serial_interface_a499984b32652d6db5cd38f813e6d1092}} 
+\index{Accumulator\+Monitor\+M017\+::\+Backend\+::\+Serial\+Interface@{Accumulator\+Monitor\+M017\+::\+Backend\+::\+Serial\+Interface}!Is\+Open@{Is\+Open}}
+\index{Is\+Open@{Is\+Open}!Accumulator\+Monitor\+M017\+::\+Backend\+::\+Serial\+Interface@{Accumulator\+Monitor\+M017\+::\+Backend\+::\+Serial\+Interface}}
+\subsubsection{\texorpdfstring{Is\+Open}{IsOpen}}
+{\footnotesize\ttfamily bool Accumulator\+Monitor\+M017.\+Backend.\+Serial\+Interface.\+Is\+Open\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+Returns the open status of this serial connection 
+
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_accumulator_monitor_m017_1_1_backend_1_1_serial_interface_afda341a3c146ca43b4b88bcf00130886}\label{class_accumulator_monitor_m017_1_1_backend_1_1_serial_interface_afda341a3c146ca43b4b88bcf00130886}} 
+\index{Accumulator\+Monitor\+M017\+::\+Backend\+::\+Serial\+Interface@{Accumulator\+Monitor\+M017\+::\+Backend\+::\+Serial\+Interface}!Last\+Frame@{Last\+Frame}}
+\index{Last\+Frame@{Last\+Frame}!Accumulator\+Monitor\+M017\+::\+Backend\+::\+Serial\+Interface@{Accumulator\+Monitor\+M017\+::\+Backend\+::\+Serial\+Interface}}
+\subsubsection{\texorpdfstring{Last\+Frame}{LastFrame}}
+{\footnotesize\ttfamily \hyperlink{class_accumulator_monitor_m017_1_1_backend_1_1_data_frame}{Data\+Frame} Accumulator\+Monitor\+M017.\+Backend.\+Serial\+Interface.\+Last\+Frame\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+The last recieved frame from this interface 
+
+\mbox{\Hypertarget{class_accumulator_monitor_m017_1_1_backend_1_1_serial_interface_aacec26c3a47343c18670be22ab147cea}\label{class_accumulator_monitor_m017_1_1_backend_1_1_serial_interface_aacec26c3a47343c18670be22ab147cea}} 
+\index{Accumulator\+Monitor\+M017\+::\+Backend\+::\+Serial\+Interface@{Accumulator\+Monitor\+M017\+::\+Backend\+::\+Serial\+Interface}!Name@{Name}}
+\index{Name@{Name}!Accumulator\+Monitor\+M017\+::\+Backend\+::\+Serial\+Interface@{Accumulator\+Monitor\+M017\+::\+Backend\+::\+Serial\+Interface}}
+\subsubsection{\texorpdfstring{Name}{Name}}
+{\footnotesize\ttfamily string Accumulator\+Monitor\+M017.\+Backend.\+Serial\+Interface.\+Name\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+The name of the port 
+
+
+
+\subsection{Event Documentation}
+\mbox{\Hypertarget{class_accumulator_monitor_m017_1_1_backend_1_1_serial_interface_aa1509130b84ccf49a834438eb9498bdf}\label{class_accumulator_monitor_m017_1_1_backend_1_1_serial_interface_aa1509130b84ccf49a834438eb9498bdf}} 
+\index{Accumulator\+Monitor\+M017\+::\+Backend\+::\+Serial\+Interface@{Accumulator\+Monitor\+M017\+::\+Backend\+::\+Serial\+Interface}!On\+Frame\+Updated@{On\+Frame\+Updated}}
+\index{On\+Frame\+Updated@{On\+Frame\+Updated}!Accumulator\+Monitor\+M017\+::\+Backend\+::\+Serial\+Interface@{Accumulator\+Monitor\+M017\+::\+Backend\+::\+Serial\+Interface}}
+\subsubsection{\texorpdfstring{On\+Frame\+Updated}{OnFrameUpdated}}
+{\footnotesize\ttfamily frame\+Recieved Accumulator\+Monitor\+M017.\+Backend.\+Serial\+Interface.\+On\+Frame\+Updated}
+
+
+
+Event raised when a frame is recieved 
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+E\+:/\+Repos/\+F\+S\+A\+E47-\/\+Apps-\//\+Accumulator\+Monitor\+M017/\+Accumulator\+Monitor\+M017\+\_\+\+Backend/Serial\+Interface.\+cs\end{DoxyCompactItemize}

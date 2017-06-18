@@ -1,0 +1,152 @@
+\hypertarget{class_accumulator_monitor_m017_1_1_backend_1_1_accumulator_interface}{}\section{Accumulator\+Monitor\+M017.\+Backend.\+Accumulator\+Interface Class Reference}
+\label{class_accumulator_monitor_m017_1_1_backend_1_1_accumulator_interface}\index{Accumulator\+Monitor\+M017.\+Backend.\+Accumulator\+Interface@{Accumulator\+Monitor\+M017.\+Backend.\+Accumulator\+Interface}}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_accumulator_monitor_m017_1_1_backend_1_1_accumulator_interface_a4e5c338ec699805a939f633e80904d8a}{Accumulator\+Interface} ()
+\begin{DoxyCompactList}\small\item\em Constructor \end{DoxyCompactList}\item 
+bool \hyperlink{class_accumulator_monitor_m017_1_1_backend_1_1_accumulator_interface_a66eeba662d4bd0a9638b996cd4a5b962}{Get\+Last\+Frame} (int segment, out \hyperlink{class_accumulator_monitor_m017_1_1_backend_1_1_data_frame}{Data\+Frame} f)
+\begin{DoxyCompactList}\small\item\em Returns the last frame recieved for the specified segment. Segment must be between 0 and 5 \end{DoxyCompactList}\item 
+void \hyperlink{class_accumulator_monitor_m017_1_1_backend_1_1_accumulator_interface_ab842e3062d2f599336fff04710d69860}{Connect\+Serial} (string name)
+\begin{DoxyCompactList}\small\item\em Establishes a serial connection to an accumulator given a port name, uses a default baudrate \end{DoxyCompactList}\item 
+void \hyperlink{class_accumulator_monitor_m017_1_1_backend_1_1_accumulator_interface_aaee24301961f0417c3274f04e6f5d199}{Connect\+Serial} (string name, int baudrate)
+\begin{DoxyCompactList}\small\item\em Establishes a serial connection to an accumulator given a port name and a baudrate \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_accumulator_monitor_m017_1_1_backend_1_1_accumulator_interface_ab835e96ddab837e6c0c2ae2d7b010440}\label{class_accumulator_monitor_m017_1_1_backend_1_1_accumulator_interface_ab835e96ddab837e6c0c2ae2d7b010440}} 
+delegate void {\bfseries Auto\+Connect\+Successful} ()
+\item 
+void \hyperlink{class_accumulator_monitor_m017_1_1_backend_1_1_accumulator_interface_a4cffc3e2a4c4edd1279e06dd58d9bdae}{Start\+Serial\+Auto\+Connect} ()
+\begin{DoxyCompactList}\small\item\em Starts Auto\+Connect \end{DoxyCompactList}\item 
+void \hyperlink{class_accumulator_monitor_m017_1_1_backend_1_1_accumulator_interface_a5dc28aa24e78d6997948b8c7163bac32}{Stop\+Serial\+Auto\+Connect} ()
+\begin{DoxyCompactList}\small\item\em Stops Autoconnect \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+Dictionary$<$ int, \hyperlink{class_accumulator_monitor_m017_1_1_backend_1_1_data_frame}{Data\+Frame} $>$ \hyperlink{class_accumulator_monitor_m017_1_1_backend_1_1_accumulator_interface_a3a410de91112d620ab24f86795aaea60}{Last\+Frames} = new Dictionary$<$int, \hyperlink{class_accumulator_monitor_m017_1_1_backend_1_1_data_frame}{Data\+Frame}$>$()
+\begin{DoxyCompactList}\small\item\em The last frames for each segment, keyed by segment number \end{DoxyCompactList}\item 
+bool \hyperlink{class_accumulator_monitor_m017_1_1_backend_1_1_accumulator_interface_ac1a1bd028a8e692f0c7c24a2db943e97}{connected} = false
+\begin{DoxyCompactList}\small\item\em Indicator of whether the program is connected to an accumulator \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Events}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_accumulator_monitor_m017_1_1_backend_1_1_accumulator_interface_aae6d67ef4fd52b5d8f8a906c495c97f8}\label{class_accumulator_monitor_m017_1_1_backend_1_1_accumulator_interface_aae6d67ef4fd52b5d8f8a906c495c97f8}} 
+Serial\+Interface.\+frame\+Recieved {\bfseries On\+Frame\+Recived}
+\item 
+\mbox{\Hypertarget{class_accumulator_monitor_m017_1_1_backend_1_1_accumulator_interface_a4e7734a5768c8cd19c001c8ce7143929}\label{class_accumulator_monitor_m017_1_1_backend_1_1_accumulator_interface_a4e7734a5768c8cd19c001c8ce7143929}} 
+Auto\+Connect\+Successful {\bfseries On\+Auto\+Connect\+Successful}
+\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_accumulator_monitor_m017_1_1_backend_1_1_accumulator_interface_a4e5c338ec699805a939f633e80904d8a}\label{class_accumulator_monitor_m017_1_1_backend_1_1_accumulator_interface_a4e5c338ec699805a939f633e80904d8a}} 
+\index{Accumulator\+Monitor\+M017\+::\+Backend\+::\+Accumulator\+Interface@{Accumulator\+Monitor\+M017\+::\+Backend\+::\+Accumulator\+Interface}!Accumulator\+Interface@{Accumulator\+Interface}}
+\index{Accumulator\+Interface@{Accumulator\+Interface}!Accumulator\+Monitor\+M017\+::\+Backend\+::\+Accumulator\+Interface@{Accumulator\+Monitor\+M017\+::\+Backend\+::\+Accumulator\+Interface}}
+\subsubsection{\texorpdfstring{Accumulator\+Interface()}{AccumulatorInterface()}}
+{\footnotesize\ttfamily Accumulator\+Monitor\+M017.\+Backend.\+Accumulator\+Interface.\+Accumulator\+Interface (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Constructor 
+
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{class_accumulator_monitor_m017_1_1_backend_1_1_accumulator_interface_ab842e3062d2f599336fff04710d69860}\label{class_accumulator_monitor_m017_1_1_backend_1_1_accumulator_interface_ab842e3062d2f599336fff04710d69860}} 
+\index{Accumulator\+Monitor\+M017\+::\+Backend\+::\+Accumulator\+Interface@{Accumulator\+Monitor\+M017\+::\+Backend\+::\+Accumulator\+Interface}!Connect\+Serial@{Connect\+Serial}}
+\index{Connect\+Serial@{Connect\+Serial}!Accumulator\+Monitor\+M017\+::\+Backend\+::\+Accumulator\+Interface@{Accumulator\+Monitor\+M017\+::\+Backend\+::\+Accumulator\+Interface}}
+\subsubsection{\texorpdfstring{Connect\+Serial()}{ConnectSerial()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void Accumulator\+Monitor\+M017.\+Backend.\+Accumulator\+Interface.\+Connect\+Serial (\begin{DoxyParamCaption}\item[{string}]{name }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Establishes a serial connection to an accumulator given a port name, uses a default baudrate 
+
+
+\begin{DoxyParams}{Parameters}
+{\em name} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_accumulator_monitor_m017_1_1_backend_1_1_accumulator_interface_aaee24301961f0417c3274f04e6f5d199}\label{class_accumulator_monitor_m017_1_1_backend_1_1_accumulator_interface_aaee24301961f0417c3274f04e6f5d199}} 
+\index{Accumulator\+Monitor\+M017\+::\+Backend\+::\+Accumulator\+Interface@{Accumulator\+Monitor\+M017\+::\+Backend\+::\+Accumulator\+Interface}!Connect\+Serial@{Connect\+Serial}}
+\index{Connect\+Serial@{Connect\+Serial}!Accumulator\+Monitor\+M017\+::\+Backend\+::\+Accumulator\+Interface@{Accumulator\+Monitor\+M017\+::\+Backend\+::\+Accumulator\+Interface}}
+\subsubsection{\texorpdfstring{Connect\+Serial()}{ConnectSerial()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void Accumulator\+Monitor\+M017.\+Backend.\+Accumulator\+Interface.\+Connect\+Serial (\begin{DoxyParamCaption}\item[{string}]{name,  }\item[{int}]{baudrate }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Establishes a serial connection to an accumulator given a port name and a baudrate 
+
+
+\begin{DoxyParams}{Parameters}
+{\em name} & \\
+\hline
+{\em baudrate} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_accumulator_monitor_m017_1_1_backend_1_1_accumulator_interface_a66eeba662d4bd0a9638b996cd4a5b962}\label{class_accumulator_monitor_m017_1_1_backend_1_1_accumulator_interface_a66eeba662d4bd0a9638b996cd4a5b962}} 
+\index{Accumulator\+Monitor\+M017\+::\+Backend\+::\+Accumulator\+Interface@{Accumulator\+Monitor\+M017\+::\+Backend\+::\+Accumulator\+Interface}!Get\+Last\+Frame@{Get\+Last\+Frame}}
+\index{Get\+Last\+Frame@{Get\+Last\+Frame}!Accumulator\+Monitor\+M017\+::\+Backend\+::\+Accumulator\+Interface@{Accumulator\+Monitor\+M017\+::\+Backend\+::\+Accumulator\+Interface}}
+\subsubsection{\texorpdfstring{Get\+Last\+Frame()}{GetLastFrame()}}
+{\footnotesize\ttfamily bool Accumulator\+Monitor\+M017.\+Backend.\+Accumulator\+Interface.\+Get\+Last\+Frame (\begin{DoxyParamCaption}\item[{int}]{segment,  }\item[{out \hyperlink{class_accumulator_monitor_m017_1_1_backend_1_1_data_frame}{Data\+Frame}}]{f }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Returns the last frame recieved for the specified segment. Segment must be between 0 and 5 
+
+
+\begin{DoxyParams}{Parameters}
+{\em segment} & \\
+\hline
+{\em f} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_accumulator_monitor_m017_1_1_backend_1_1_accumulator_interface_a4cffc3e2a4c4edd1279e06dd58d9bdae}\label{class_accumulator_monitor_m017_1_1_backend_1_1_accumulator_interface_a4cffc3e2a4c4edd1279e06dd58d9bdae}} 
+\index{Accumulator\+Monitor\+M017\+::\+Backend\+::\+Accumulator\+Interface@{Accumulator\+Monitor\+M017\+::\+Backend\+::\+Accumulator\+Interface}!Start\+Serial\+Auto\+Connect@{Start\+Serial\+Auto\+Connect}}
+\index{Start\+Serial\+Auto\+Connect@{Start\+Serial\+Auto\+Connect}!Accumulator\+Monitor\+M017\+::\+Backend\+::\+Accumulator\+Interface@{Accumulator\+Monitor\+M017\+::\+Backend\+::\+Accumulator\+Interface}}
+\subsubsection{\texorpdfstring{Start\+Serial\+Auto\+Connect()}{StartSerialAutoConnect()}}
+{\footnotesize\ttfamily void Accumulator\+Monitor\+M017.\+Backend.\+Accumulator\+Interface.\+Start\+Serial\+Auto\+Connect (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Starts Auto\+Connect 
+
+\mbox{\Hypertarget{class_accumulator_monitor_m017_1_1_backend_1_1_accumulator_interface_a5dc28aa24e78d6997948b8c7163bac32}\label{class_accumulator_monitor_m017_1_1_backend_1_1_accumulator_interface_a5dc28aa24e78d6997948b8c7163bac32}} 
+\index{Accumulator\+Monitor\+M017\+::\+Backend\+::\+Accumulator\+Interface@{Accumulator\+Monitor\+M017\+::\+Backend\+::\+Accumulator\+Interface}!Stop\+Serial\+Auto\+Connect@{Stop\+Serial\+Auto\+Connect}}
+\index{Stop\+Serial\+Auto\+Connect@{Stop\+Serial\+Auto\+Connect}!Accumulator\+Monitor\+M017\+::\+Backend\+::\+Accumulator\+Interface@{Accumulator\+Monitor\+M017\+::\+Backend\+::\+Accumulator\+Interface}}
+\subsubsection{\texorpdfstring{Stop\+Serial\+Auto\+Connect()}{StopSerialAutoConnect()}}
+{\footnotesize\ttfamily void Accumulator\+Monitor\+M017.\+Backend.\+Accumulator\+Interface.\+Stop\+Serial\+Auto\+Connect (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Stops Autoconnect 
+
+
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{class_accumulator_monitor_m017_1_1_backend_1_1_accumulator_interface_ac1a1bd028a8e692f0c7c24a2db943e97}\label{class_accumulator_monitor_m017_1_1_backend_1_1_accumulator_interface_ac1a1bd028a8e692f0c7c24a2db943e97}} 
+\index{Accumulator\+Monitor\+M017\+::\+Backend\+::\+Accumulator\+Interface@{Accumulator\+Monitor\+M017\+::\+Backend\+::\+Accumulator\+Interface}!connected@{connected}}
+\index{connected@{connected}!Accumulator\+Monitor\+M017\+::\+Backend\+::\+Accumulator\+Interface@{Accumulator\+Monitor\+M017\+::\+Backend\+::\+Accumulator\+Interface}}
+\subsubsection{\texorpdfstring{connected}{connected}}
+{\footnotesize\ttfamily bool Accumulator\+Monitor\+M017.\+Backend.\+Accumulator\+Interface.\+connected = false}
+
+
+
+Indicator of whether the program is connected to an accumulator 
+
+\mbox{\Hypertarget{class_accumulator_monitor_m017_1_1_backend_1_1_accumulator_interface_a3a410de91112d620ab24f86795aaea60}\label{class_accumulator_monitor_m017_1_1_backend_1_1_accumulator_interface_a3a410de91112d620ab24f86795aaea60}} 
+\index{Accumulator\+Monitor\+M017\+::\+Backend\+::\+Accumulator\+Interface@{Accumulator\+Monitor\+M017\+::\+Backend\+::\+Accumulator\+Interface}!Last\+Frames@{Last\+Frames}}
+\index{Last\+Frames@{Last\+Frames}!Accumulator\+Monitor\+M017\+::\+Backend\+::\+Accumulator\+Interface@{Accumulator\+Monitor\+M017\+::\+Backend\+::\+Accumulator\+Interface}}
+\subsubsection{\texorpdfstring{Last\+Frames}{LastFrames}}
+{\footnotesize\ttfamily Dictionary$<$int, \hyperlink{class_accumulator_monitor_m017_1_1_backend_1_1_data_frame}{Data\+Frame}$>$ Accumulator\+Monitor\+M017.\+Backend.\+Accumulator\+Interface.\+Last\+Frames = new Dictionary$<$int, \hyperlink{class_accumulator_monitor_m017_1_1_backend_1_1_data_frame}{Data\+Frame}$>$()}
+
+
+
+The last frames for each segment, keyed by segment number 
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+E\+:/\+Repos/\+F\+S\+A\+E47-\/\+Apps-\//\+Accumulator\+Monitor\+M017/\+Accumulator\+Monitor\+M017\+\_\+\+Backend/Accumulator\+Interface.\+cs\end{DoxyCompactItemize}
