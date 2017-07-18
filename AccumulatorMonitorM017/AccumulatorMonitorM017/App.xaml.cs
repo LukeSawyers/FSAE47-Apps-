@@ -13,5 +13,6 @@ namespace AccumulatorMonitorM017
     /// </summary>
     public partial class App : Application
     {
+
     }
 }

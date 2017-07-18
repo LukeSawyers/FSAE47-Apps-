@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using UnityEngine.UI;
 using System.Collections.Generic;
-using DTS.Controllers;
+using DTS.UI;
 
 namespace DTS.Legacy
 {
@@ -216,11 +216,11 @@ namespace DTS.Legacy
             {
                 case ProgramState.MainMenu:
                     MainMenuUI.SetActive(true);
-                    CameraController.main.Orbit(new Vector3(50, 10, 0), new Vector3(0, 0, 0), MainMenuCameraOrbitSpeed);
+                    CameraControllerBehaviour.main.Orbit(new Vector3(50, 10, 0), new Vector3(0, 0, 0), MainMenuCameraOrbitSpeed);
                     break;
                 case ProgramState.SelectCar:
                     SelectCarUI.SetActive(true);
-                    CarProviderSingleton.Instance.StartOrbiting();
+                   
                     
                     break;
                 case ProgramState.SelectEvent:

@@ -1,1 +1,15 @@
 C:\Users\luke_\Desktop\FSAE Apps\AccumulatorMonitorM017\AccumulatorMonitor2017_Tests\obj\Release\AccumulatorMonitor2017.Tests.csprojResolveAssemblyReference.cache
+E:\Repos\FSAE47-Apps-\AccumulatorMonitorM017\AccumulatorMonitor2017_Tests\bin\Release\AccumulatorMonitor2017_Tests.dll
+E:\Repos\FSAE47-Apps-\AccumulatorMonitorM017\AccumulatorMonitor2017_Tests\bin\Release\AccumulatorMonitor2017_Tests.pdb
+E:\Repos\FSAE47-Apps-\AccumulatorMonitorM017\AccumulatorMonitor2017_Tests\bin\Release\AccumulatorMonitorM017.exe
+E:\Repos\FSAE47-Apps-\AccumulatorMonitorM017\AccumulatorMonitor2017_Tests\bin\Release\AccumulatorMonitorM017_Backend.dll
+E:\Repos\FSAE47-Apps-\AccumulatorMonitorM017\AccumulatorMonitor2017_Tests\bin\Release\AccumulatorMonitorM017_Console.exe
+E:\Repos\FSAE47-Apps-\AccumulatorMonitorM017\AccumulatorMonitor2017_Tests\bin\Release\Microsoft.VisualStudio.QualityTools.UnitTestFramework.dll
+E:\Repos\FSAE47-Apps-\AccumulatorMonitorM017\AccumulatorMonitor2017_Tests\bin\Release\AccumulatorMonitorM017.pdb
+E:\Repos\FSAE47-Apps-\AccumulatorMonitorM017\AccumulatorMonitor2017_Tests\bin\Release\AccumulatorMonitorM017.exe.config
+E:\Repos\FSAE47-Apps-\AccumulatorMonitorM017\AccumulatorMonitor2017_Tests\bin\Release\AccumulatorMonitorM017_Backend.pdb
+E:\Repos\FSAE47-Apps-\AccumulatorMonitorM017\AccumulatorMonitor2017_Tests\bin\Release\AccumulatorMonitorM017_Console.pdb
+E:\Repos\FSAE47-Apps-\AccumulatorMonitorM017\AccumulatorMonitor2017_Tests\bin\Release\AccumulatorMonitorM017_Console.exe.config
+E:\Repos\FSAE47-Apps-\AccumulatorMonitorM017\AccumulatorMonitor2017_Tests\obj\Release\AccumulatorMonitor2017.Tests.csprojResolveAssemblyReference.cache
+E:\Repos\FSAE47-Apps-\AccumulatorMonitorM017\AccumulatorMonitor2017_Tests\obj\Release\AccumulatorMonitor2017_Tests.dll
+E:\Repos\FSAE47-Apps-\AccumulatorMonitorM017\AccumulatorMonitor2017_Tests\obj\Release\AccumulatorMonitor2017_Tests.pdb

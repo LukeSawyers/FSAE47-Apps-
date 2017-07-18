@@ -4,17 +4,17 @@
 winexe
 C#
 .cs
-C:\Users\luke_\Desktop\FSAE Apps\AccumulatorMonitorM017\AccumulatorMonitorM017\obj\Release\
+E:\Repos\FSAE47-Apps-\AccumulatorMonitorM017\AccumulatorMonitorM017\obj\Release\
 AccumulatorMonitorM017
 none
 false
 TRACE
-C:\Users\luke_\Desktop\FSAE Apps\AccumulatorMonitorM017\AccumulatorMonitorM017\App.xaml
-11151548125
+E:\Repos\FSAE47-Apps-\AccumulatorMonitorM017\AccumulatorMonitorM017\App.xaml
+2-1579135494
 
-5-2017746502
-14-414334757
-MainWindow.xaml;
+6-1409585917
+14-987908315
+AccumulatorView.xaml;MainWindow.xaml;
 
-False
+True
 
